@@ -7,7 +7,6 @@ if(have_posts()): while(have_posts()): the_post(); ?>
     <div><?= get_the_content(); ?></div>
 
 <?php
-    // On ferme "la boucle" (The Loop):
 endwhile; else: ?>
     <p>La page est vide.</p>
 <?php endif; ?>
