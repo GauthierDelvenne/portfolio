@@ -11,10 +11,18 @@
         </ul>
     </nav>
     <section class="contact_details">
-        <ul></ul>
+        <ul class="list">
+            <li class="list_item">+32 497 54 69 43</li>
+            <li class="list_item">gauthier.delvenne@student.hepl.be</li>
+            <li class="list_item">Cours d’Omalius</li>
+            <li class="list_item">4160 Anthisnes</li>
+        </ul>
     </section>
     <section class="networks">
-        <ul></ul>
+        <ul class="list">
+            <li class="list_item">Github</li>
+            <li class="list_item">Linkedin</li>
+        </ul>
     </section>
     <?php wp_footer(); ?>
 </footer>
