@@ -26,13 +26,49 @@
                                 </div>
                             </li>
                         <?php endwhile; ?>
-
                     </ul>
                 <?php endif; ?>
             </section>
         <?php endif; ?>
+        <?php if (get_row_layout() == 'about_asset'): ?>
+            <section class="about_asset">
+                <h2 class="about_asset_title"></h2>
+                <?php if (have_rows('assets')): ?>
+                    <?php while (have_rows('assets')) : the_row(); ?>
+                        <article>
+                            <h3 class="hidden"><?php the_sub_field('about_asset_article_title'); ?></h3>
+                            <figure class="about_asset_img"><?php the_sub_field('about_asset_img'); ?></figure>
+                            <p class="about_asset_content"><?php the_sub_field('about_asset_content'); ?></p>
+                        </article>
+                    <?php endwhile; ?>
 
-        <!--    continuer avec les assets-->
+                <?php endif; ?>
+            </section>
+        <?php endif; ?>
+        <?php if (get_row_layout() == 'contact_redirect'): ?>
+            <section class="contact_redirect">
+                <h2 class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
+                <?php
+                $button = get_sub_field('contact_redirect_button');
+                if ($button): ?>
+                    <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target'] ?: '_self'); ?>" class="contact_redirect_button">
+                        <?php echo esc_html($button['title']); ?>
+                    </a>
+                <?php endif; ?>
+            </section>
+        <?php endif; ?>
+        <?php if (get_row_layout() == 'project_redirect'): ?>
+            <section class="project_redirect">
+                <h2 class="project_redirect_title"><?php the_sub_field('project_redirect_title'); ?></h2>
+                <?php
+                $button = get_sub_field('project_redirect_button');
+                if ($button): ?>
+                    <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target'] ?: '_self'); ?>" class="project_redirect_button">
+                        <?php echo esc_html($button['title']); ?>
+                    </a>
+                <?php endif; ?>
+            </section>
+        <?php endif; ?>
     <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
