@@ -8,16 +8,8 @@
                 <figure class="presentation_fig">
                     <!--ajouter l'image-->
                 </figure>
-                <p class="presentation_firstname"><?php the_sub_field('presentation_firstname'); ?></p>
-                <p class="presentation_lastname"><?php the_sub_field('presentation_lastname'); ?></p>
+                <p class="presentation_firstname"><?php the_sub_field('presentation_title'); ?></p>
                 <p class="presentation_profession"><?php the_sub_field('presentation_profession'); ?></p>
-            </div>
-        <?php elseif (get_row_layout() == 'presentation_about'): ?>
-            <div class="presentation_about">
-                <p class="presentation_about_description"><?php the_sub_field('presentation_description'); ?></p>
-                <div class="presentation_about_illustration">
-                    <p lang="en"><?php the_sub_field('presentation_context_message'); ?></p>
-                </div>
             </div>
             </section>
         <?php endif; ?>
@@ -46,7 +38,6 @@
                 <figure class="discover_fig">
                     <!--ajouter l'image-->
                 </figure>
-
             </article>
         </div>
     </section>
