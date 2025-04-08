@@ -1,0 +1,16 @@
+
+@media (prefers-reduced-motion: no-preference) {
+  .hamburger+label span {transition: background 10ms 300ms;}
+  .hamburger+label span::before,
+  .hamburger+label span::after{transition: top 300ms 350ms, transform 300ms 50ms;}
+  .hamburger:checked+label span::after,
+  .hamburger:checked+label span::before {transition: top 300ms 50ms, transform 300ms 350ms;}
+
+  .hamburger:focus-visible~label,nav a:focus-visible,
+  nav a:focus  {transition: outline-offset .25s ease;}
+
+  nav{transition: transform 0.5s;}
+  nav a{transition: visibility 500ms,opacity 500ms 300ms;}
+
+
+}

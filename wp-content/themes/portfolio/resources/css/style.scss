@@ -1,5 +1,8 @@
-
-body {
+@import 'utils/reset';
+@import "general/header";
+@import "utils/hidden";
+@import "settings/media";
+html {
   background-color: black;
   color: white;
 }

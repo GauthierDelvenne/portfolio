@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.625rem;
+
+  &_button_menu {
+    input[type="checkbox"] {
+      position: absolute;
+      left: -100vw;
+    }
+    .hamburger + label {
+      width: 60px;
+      height: 60px;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      position: fixed;
+      top:1rem;
+      left:1rem;
+      z-index:1;
+    }
+
+    .hamburger + label span {
+      background: #fff;
+      width: 32px;
+      height: 5px;
+      position: relative;
+    }
+
+    .hamburger + label span::before,
+    .hamburger + label span::after {
+      position: absolute;
+      background: #fff;
+      width: inherit;
+      height: inherit;
+      content: "";
+    }
+
+    .hamburger + label span::before {
+      top: -10px;
+    }
+
+    .hamburger + label span::after {
+      top: 10px;
+    }
+
+    .hamburger:checked + label span {
+      background: transparent;
+    }
+
+    .hamburger:checked + label span::after,
+    .hamburger:checked + label span::before {
+      top: 0;
+    }
+
+    .hamburger:checked + label span::before {
+      transform: rotate(45deg);
+    }
+
+    .hamburger:checked + label span::after {
+      transform: rotate(-45deg);
+    }
+    .hamburger:checked+label~ nav{
+      transform: unset;
+    }
+
+    .hamburger:checked+label~ nav a {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .hamburger:not(:focus-visible)~label,nav a:not(:focus):focus-visible{
+      outline: none;
+    }
+  }
+
+  &_nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: min(50%, 300px);
+    background: rgba(0, 0, 0, 1);
+    transform: translateX(-100%);
+    will-change: transform;
+
+    .nav_container {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 6rem;
+    }
+
+    .nav_item {
+      margin: 1rem;
+      a {
+        font-size: 1.25rem;
+        color: #fff;
+        text-decoration: none;
+        opacity: 0;
+      }
+    }
+  }
+  &_lang {
+    align-self: center;
+  }
+}
+
