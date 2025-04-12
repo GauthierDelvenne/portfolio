@@ -21,8 +21,8 @@
 <header class="header">
     <h1 class="hidden"><?= get_bloginfo('name') ?></h1>
     <div class="header_button_menu">
-        <input class="hamburger" type="checkbox" id="votre_id" tabindex="0">
-        <label for="votre_id" aria-label="Menu"><span></span></label>
+        <input class="menu" type="checkbox" id="menu" tabindex="0">
+        <label for="menu" aria-label="Menu"><span></span></label>
         <nav class="header_nav">
             <h2 class="hidden">Navigation principal</h2>
             <ul class="nav_container">

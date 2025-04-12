@@ -1,34 +1,33 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 0.625rem;
+  margin: 0 1rem;
 
   &_button_menu {
     input[type="checkbox"] {
       position: absolute;
       left: -100vw;
     }
-    .hamburger + label {
-      width: 60px;
-      height: 60px;
+    .menu + label {
+      width: 2rem;
+      height: 2rem;
       display:flex;
-      align-items:center;
-      justify-content: center;
-      position: fixed;
-      top:1rem;
+      position: absolute;
+      top:3rem;
       left:1rem;
       z-index:1;
     }
 
-    .hamburger + label span {
+    .menu + label span {
       background: #fff;
-      width: 32px;
+      width: 2rem;
       height: 5px;
       position: relative;
     }
 
-    .hamburger + label span::before,
-    .hamburger + label span::after {
+    .menu + label span::before,
+    .menu + label span::after {
       position: absolute;
       background: #fff;
       width: inherit;
@@ -36,40 +35,40 @@
       content: "";
     }
 
-    .hamburger + label span::before {
+    .menu + label span::before {
       top: -10px;
     }
 
-    .hamburger + label span::after {
+    .menu + label span::after {
       top: 10px;
     }
 
-    .hamburger:checked + label span {
+    .menu:checked + label span {
       background: transparent;
     }
 
-    .hamburger:checked + label span::after,
-    .hamburger:checked + label span::before {
+    .menu:checked + label span::after,
+    .menu:checked + label span::before {
       top: 0;
     }
 
-    .hamburger:checked + label span::before {
+    .menu:checked + label span::before {
       transform: rotate(45deg);
     }
 
-    .hamburger:checked + label span::after {
+    .menu:checked + label span::after {
       transform: rotate(-45deg);
     }
-    .hamburger:checked+label~ nav{
+    .menu:checked+label~ nav{
       transform: unset;
     }
 
-    .hamburger:checked+label~ nav a {
+    .menu:checked+label~ nav a {
       visibility: visible;
       opacity: 1;
     }
 
-    .hamburger:not(:focus-visible)~label,nav a:not(:focus):focus-visible{
+    .menu:not(:focus-visible)~label,nav a:not(:focus):focus-visible{
       outline: none;
     }
   }
