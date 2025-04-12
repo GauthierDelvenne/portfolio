@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Nextir Brush';
+  src: url('/wp-content/themes/portfolio/resources/fonts/Nextir Brush.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Jura';
+  src: url('/wp-content/themes/portfolio/resources/fonts/Jura-VariableFont_wght.ttf') format('TrueType');
+}
+
+$headFont: 'Nextir Brush', sans-serif;
+$textFont: 'Jura', sans-serif;
