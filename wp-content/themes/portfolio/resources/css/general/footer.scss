@@ -1,0 +1,29 @@
+@import "../settings/fonts";
+@import "../settings/colors";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  gap: 50px;
+  margin: 30px 0;
+
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  li {
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: $textFont;
+  }
+ a{
+   color: $primaryColor;
+   text-decoration: none;
+ }
+}
