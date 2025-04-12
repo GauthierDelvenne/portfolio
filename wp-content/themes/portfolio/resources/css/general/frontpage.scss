@@ -1,0 +1,34 @@
+@import "../settings/fonts";
+
+.presentation {
+  &_me {
+    text-align: center;
+    font-family: $headFont;
+    line-height: normal;
+    &_hook {
+      font-size: 40px;
+    }
+
+    &_profession {
+      font-size: 30px;
+    }
+  }
+}
+
+.discover {
+  &_content {
+    h2 {
+      font-size: 15px;
+
+    }
+
+    p {
+      font-size: 14px;
+      font-family: $textFont;
+      line-height: normal;
+    }
+  }
+
+  &_projects {
+  }
+}
