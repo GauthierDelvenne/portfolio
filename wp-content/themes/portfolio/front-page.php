@@ -5,11 +5,8 @@
             <section class="presentation">
             <h2 class="hidden">Présentation de ma personne</h2>
             <div class="presentation_me">
-                <figure class="presentation_fig">
-                    <!--ajouter l'image-->
-                </figure>
-                <p class="presentation_firstname"><?php the_sub_field('presentation_title'); ?></p>
-                <p class="presentation_profession"><?php the_sub_field('presentation_profession'); ?></p>
+                <p class="presentation_me_hook"><?php the_sub_field('presentation_title'); ?></p>
+                <p class="presentation_me_profession"><?php the_sub_field('presentation_profession'); ?></p>
             </div>
             </section>
         <?php endif; ?>
