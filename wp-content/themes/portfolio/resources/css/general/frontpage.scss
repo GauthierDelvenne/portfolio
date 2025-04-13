@@ -1,34 +1,87 @@
 @import "../settings/fonts";
 
 .presentation {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
   &_me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
     text-align: center;
     font-family: $headFont;
     line-height: normal;
+
     &_hook {
-      font-size: 40px;
+      font-size: 2.5rem;
     }
 
     &_profession {
-      font-size: 30px;
+
+      font-size: 1.875rem;
     }
   }
 }
 
 .discover {
   &_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 4.375rem;
+
     h2 {
-      font-size: 15px;
+      font-size: 0.938rem;
 
     }
 
     p {
-      font-size: 14px;
+      width: 10.938rem;
+      font-size: 0.875rem;
       font-family: $textFont;
       line-height: normal;
     }
+
   }
 
   &_projects {
+    display: flex;
+    justify-content: space-around;
+
+    .discover_project {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+
+      h3 {
+        text-align: center;
+      }
+
+      a {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      picture {
+        order: -1;
+
+        img {
+          width: 10.938rem;
+          height: 10.938rem;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
   }
 }
