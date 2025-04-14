@@ -45,7 +45,17 @@
     }
   }
 }
-
+.about_asset {
+  article{
+  display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    picture{
+      text-align: center;
+    }
+  }
+}
 .contact_redirect,
 .project_redirect {
   text-align: center;
