@@ -23,13 +23,13 @@
             <div class="discover_projects">
         <?php elseif (get_row_layout() == 'discover_project'): ?>
             <article class="discover_project">
-                <a href="<?= get_sub_field('discover_link')['url']; ?>"></a>
+                <a href="<?= get_sub_field('discover_link'); ?>"></a>
                 <h3><?php the_sub_field('discover_title_h3'); ?></h3>
                 <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
             </article>
         <?php elseif (get_row_layout() == 'discover_project_2'): ?>
             <article class="discover_project">
-                <a href="<?= get_sub_field('discover_link')['url']; ?>"></a>
+                <a href="<?= get_sub_field('discover_link'); ?>"></a>
                 <h3 lang="la"><?php the_sub_field('discover_title_h3'); ?></h3>
                 <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
             </article>
