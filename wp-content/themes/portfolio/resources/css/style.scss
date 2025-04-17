@@ -4,6 +4,9 @@
 @import "general/frontpage";
 @import "general/footer";
 @import "general/headline";
+@import "general/about";
+@import "general/contact";
+@import "general/projects";
 @import "settings/media";
 @import "settings/colors";
 @import "settings/fonts";
@@ -16,6 +19,7 @@ body {
   min-height: 100vh;
   z-index: 0;
   font-size: 16px;
+  font-family: $textFont;
 }
 
 body::before {

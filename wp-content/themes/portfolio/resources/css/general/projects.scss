@@ -1,0 +1,51 @@
+@import "../settings/fonts";
+@import "../settings/colors";
+
+.title {
+  font-family: $headFont;
+  font-size: 1rem;
+}
+
+.filters {
+  a {
+    padding: 0.7rem;
+    background-color: $primaryColor;
+    color: $backgroundColor;
+    border-radius: 0.7rem;
+  }
+
+  &_choice {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 4rem
+}
+
+.presentation_redirect {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+
+  &_title {
+    font-size: 1.5rem;
+  }
+
+  &_button {
+    background-color: $primaryColor;
+    border-radius: 0.625rem;
+    padding: 0.75rem 2.5rem;
+    color: $backgroundColor;
+    text-decoration: none;
+    width: fit-content;
+  }
+}
