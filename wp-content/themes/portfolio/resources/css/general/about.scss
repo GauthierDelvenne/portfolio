@@ -49,10 +49,15 @@
   article{
   display: flex;
     flex-direction: column;
+    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     picture{
       text-align: center;
+    }
+    .about_asset_content{
+      max-width: 400px;
+      margin-inline: auto;
     }
   }
 }
