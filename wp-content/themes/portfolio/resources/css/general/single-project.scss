@@ -1,0 +1,69 @@
+@import "../settings/fonts";
+@import "../settings/colors";
+
+
+.single_projet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  &_head {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .single_projet_title {
+      font-size: 1.5rem;
+      position: absolute;
+      bottom: 0.8rem;
+      background-color: $backgroundColor;
+      padding: 0.3rem;
+      border-radius: 0.6rem;
+    }
+
+    img {
+      min-width: 80vw;
+      max-height: 200px;
+      object-fit: cover;
+      object-position: 0 -20px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+
+    &:nth-of-type(3) {
+      flex-direction: row;
+      justify-content: end;
+
+    }
+
+    &:nth-of-type(5) {
+      text-align: end;
+    }
+
+    p {
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+
+    .single_projet_galerie {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+
+      img {
+        min-width: 120px;
+        max-height: 120px;
+        object-fit: cover;
+      }
+    }
+  }
+}

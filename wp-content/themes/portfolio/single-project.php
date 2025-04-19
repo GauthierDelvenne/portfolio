@@ -3,8 +3,10 @@
     <?php while (have_rows('projet')) : the_row(); ?>
         <?php if (get_row_layout() == 'single_projet'): ?>
             <section class="single_projet">
-                <h2 class="single_projet_title"><?php the_sub_field('single_projet_title'); ?></h2>
-                <figure class="single_projet_img"></figure>
+                <div class="single_projet_head">
+                    <h2 class="single_projet_title"><?php the_sub_field('single_projet_title'); ?></h2>
+                    <?= responsive_image(get_sub_field('single_projet_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                </div>
                 <?php if (have_rows('single_projet_content')): ?>
                     <?php while (have_rows('single_projet_content')) : the_row(); ?>
                         <div class="single_projet_content">
@@ -12,9 +14,17 @@
                             <?php if (get_sub_field('single_projet_texte')): ?>
                                 <p class="single_projet_text"><?php the_sub_field('single_projet_texte'); ?></p>
                             <?php endif; ?>
-                            <?php if (get_sub_field('single_projet_fig')): ?>
-                                <figure class="single_projet_fig"><?php the_sub_field('single_projet_fig'); ?></figure>
-                            <?php endif; ?>
+                            <?php if (get_sub_field('single_project_choice') === true): ?>
+                                <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                            <?php elseif (get_sub_field('single_project_fig')) : $galeries = get_sub_field('single_project_fig') ?>
+                                <div class="single_projet_galerie">
+                                    <?php foreach ($galeries as $galerie): ?>
+                                        <?= responsive_image($galerie, ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                                    <?php endforeach ?>
+                                </div>
+                            <?php else : ?>
+
+                            <?php endif ?>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
