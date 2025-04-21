@@ -18,6 +18,9 @@
 
 </head>
 <body>
+<?php
+require __DIR__ . '/resources/svg/spriteSVG.php'
+?>
 <header class="header">
     <h1 class="hidden"><?= get_bloginfo('name') ?></h1>
     <div class="header_button_menu">
@@ -35,7 +38,9 @@
         </nav>
     </div>
     <div class="header_svg_content">
-        <a href="front-page.php"><span class="hidden">Retourner à la page d’accueil</span></a>
+        <a href="<?= dirname($_SERVER['SCRIPT_NAME']) ?>">
+            <span class="hidden">Retourner à la page d’accueil</span>
+        </a>
         <svg class="header_svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="150" viewBox="0 0 153 91">
             <title>Illustration de portfolio</title>
             <desc>Logo pour illustrer que le site est un portfolio</desc>

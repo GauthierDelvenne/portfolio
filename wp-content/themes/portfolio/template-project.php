@@ -33,7 +33,15 @@ $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) 
 <?php if (have_rows('project')): ?>
     <?php while (have_rows('project')) : the_row(); ?>
         <?php if (get_row_layout() == 'project_title'): ?>
+        <div class="container_title">
             <p class="title"><?php the_sub_field('title'); ?></p>
+            <svg class="underline">
+                <use xlink:href="#underline"></use>
+            </svg>
+            <svg class="rightCloud">
+                <use xlink:href="#rightCloud"></use>
+            </svg>
+        </div>
             <div class="filters">
                 <p class="title"><?php the_sub_field('title_filter'); ?></p>
                 <div class="filters_choice">
@@ -57,13 +65,21 @@ $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) 
     <div class="project-list">
         <?php while ($query->have_posts()) : $query->the_post(); ?>
             <article class="project">
-                <?php $title = get_field('headline', get_the_ID()) ?>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <div><?php the_excerpt(); ?></div>
+                <?php if (have_rows('projet')) : ?>
+                    <?php while (have_rows('projet')) :
+                        the_row(); ?>
+                        <?php if (get_row_layout() == 'single_projet') : ?>
+                        <?= responsive_image(get_sub_field('single_projet_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                        <svg class="border">
+                            <use xlink:href="#border"></use>
+                        </svg>
+                    <?php endif; ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </article>
         <?php endwhile; ?>
     </div>
-
     <div class="pagination">
         <?php
         echo paginate_links([
@@ -84,7 +100,12 @@ $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) 
     <?php while (have_rows('project')) : the_row(); ?>
         <?php if (get_row_layout() == 'presentation_redirect'): ?>
             <section class="presentation_redirect">
+                <div class="presentation_redirect_container">
                 <h2 class="presentation_redirect_title"><?php the_sub_field('presentation_redirect_title'); ?></h2>
+                <svg class="icon">
+                    <use xlink:href="#icon"></use>
+                </svg>
+                </div>
                 <?php
                 $button = get_sub_field('presentation_redirect_link');
                 if ($button): ?>

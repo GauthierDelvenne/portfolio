@@ -1,6 +1,13 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 
+
+.separator svg {
+  width: 100%;
+  height: auto;
+  margin: 3.125rem 0 1.875rem;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -22,8 +29,9 @@
     margin-bottom: 0.938rem;
     font-family: $textFont;
   }
- a{
-   color: $primaryColor;
-   text-decoration: none;
- }
+
+  a {
+    color: $primaryColor;
+    text-decoration: none;
+  }
 }

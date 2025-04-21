@@ -5,14 +5,62 @@
   &_information {
     text-align: center;
 
+    &_content {
+      p {
+        margin-top: 1.5rem;
+      }
+
+      margin-bottom: 48px;
+    }
+
     &_title {
       font-size: 1.25rem;
       font-family: $headFont;
+
+    }
+
+    &_container {
+      .form_title {
+        margin: 50px 2rem 50px;
+      }
+
+      position: relative;
+
+      .underline {
+        position: absolute;
+        height: 1rem;
+        width: 100px;
+        top: 5px;
+        z-index: -1;
+      }
+
+      .rightCloud {
+        position: absolute;
+        top: -60px;
+        right: -60px;
+      }
     }
   }
 
   .form {
+
+
     &_fields {
+      position: relative;
+
+      .bigCloud {
+        position: absolute;
+      }
+
+      .b1 {
+        left: -50px;
+        top: 50px;
+      }
+
+      .b2 {
+        right: -50px;
+        bottom: 50px;
+      }
 
       .field {
         display: flex;
@@ -20,6 +68,18 @@
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 2rem;
+        position: relative;
+
+        .round {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          color: $thirdColor;
+          right: 20px;
+          z-index: -1;
+        }
 
         input, textarea {
           width: 70vw;

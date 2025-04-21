@@ -1,14 +1,21 @@
 <?php /* Template Name: Template "Contact" */ ?>
 <?php get_header(); ?>
 <section class="forms">
-    <h2 class="form_title">
-        <?php the_title(); ?>
-    </h2>
+    <div class="forms_information_container">
+        <h2 class="form_title"><?php the_title(); ?></h2>
+        <svg class="underline">
+            <use xlink:href="#underline"></use>
+        </svg>
+        <svg class="rightCloud">
+            <use xlink:href="#rightCloud"></use>
+        </svg>
+    </div>
+
     <div class="forms_information">
         <p class="forms_information_title"><?= get_field('form_information_title'); ?></p>
         <div class="forms_information_content">
-        <p><?= get_field('form_information_phone'); ?></p>
-        <p><?= get_field('form_information_mail'); ?></p>
+            <p><?= get_field('form_information_phone'); ?></p>
+            <p><?= get_field('form_information_mail'); ?></p>
         </div>
     </div>
     <?php
@@ -22,6 +29,12 @@
     <?php else : ?>
         <form action="<?= esc_url(admin_url('admin-post.php')); ?>" method="POST" class="form">
             <fieldset class="form_fields">
+                <svg class="bigCloud b1">
+                    <use xlink:href="#bigCloud"></use>
+                </svg>
+                <svg class="bigCloud b2">
+                    <use xlink:href="#bigCloud"></use>
+                </svg>
                 <div class="field">
                     <label for="lastname" class="field_label">Nom</label>
                     <input type="text" name="lastname" id="lastname" class="field_input" placeholder="Votre nom">
@@ -30,6 +43,9 @@
                     <?php endif ?>
                 </div>
                 <div class="field">
+                    <svg class="round">
+                        <use xlink:href="#round"></use>
+                    </svg>
                     <label for="email" class="field_label">Adresse mail</label>
                     <input type="email" name="email" id="email" class="field_input" placeholder="Votre adresse mail">
                     <?php if (isset($errors['email'])): ?>
@@ -38,7 +54,8 @@
                 </div>
                 <div class="field">
                     <label for="phone" class="field_label">Numéro de téléphone</label>
-                    <input type="tel" name="phone" id="phone" class="field_input" placeholder="Votre numéro de téléphone">
+                    <input type="tel" name="phone" id="phone" class="field_input"
+                           placeholder="Votre numéro de téléphone">
                     <?php if (isset($errors['phone'])): ?>
                         <p class="field_error"><?= $errors['phone']; ?></p>
                     <?php endif ?>

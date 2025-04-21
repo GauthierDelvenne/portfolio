@@ -1,12 +1,37 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 
+.container_title {
+  position: relative;
+
+  .title {
+    margin: 50px 2rem 50px;
+  }
+
+  .underline {
+    position: absolute;
+    height: 1rem;
+    width: 100px;
+    top: 5px;
+    z-index: -1;
+  }
+
+  .rightCloud {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+  }
+}
+
 .title {
   font-family: $headFont;
   font-size: 1rem;
+  margin: 0 2rem;
 }
 
 .filters {
+  margin-bottom: 60px;
+
   a {
     padding: 0.7rem;
     background-color: $primaryColor;
@@ -18,13 +43,47 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1rem;
   }
 }
 
 .project-list {
   display: flex;
   justify-content: center;
-  gap: 4rem
+  gap: 4rem;
+
+  .project {
+    position: relative;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    h2 {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+
+      a {
+        color: $backgroundColor;
+        text-decoration: none;
+        background-color: $primaryColor;
+        padding: 0.2rem;
+        border-radius: 0.3rem;
+      }
+    }
+
+    .border {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      top: -10px;
+      left: -8px;
+    }
+  }
 }
 
 .presentation_redirect {
@@ -34,7 +93,18 @@
   gap: 1rem;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: 1.25rem;
+  margin-top: 100px;
+  position: relative;
+
+  &_container {
+    .icon {
+      position: absolute;
+      width: 70px;
+      height: 50px;
+      right: 30px;
+      top: -20px;
+    }
+  }
 
   &_title {
     font-size: 1.5rem;
