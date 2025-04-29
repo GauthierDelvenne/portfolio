@@ -13,6 +13,10 @@
     <meta name="googlebot" content="index, follow">
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/wp-content/themes/portfolio/resources/img/mascotte.png">
     <script src="<?= portfolio_asset('js') ?>" defer></script>
     <?php wp_head(); ?>
 
@@ -80,7 +84,7 @@ require __DIR__ . '/resources/svg/spriteSVG.php'
                   style="fill: #fff;"/>
         </svg>
     </div>
-        
+
     <p class="header_lang"><abbr title="English">EN</abbr></p>
 </header>
 <main>
