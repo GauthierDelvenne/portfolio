@@ -5,8 +5,8 @@
               fill="white"/>
     </svg>
 </div>
-<footer class="footer">
-    <nav class="footer_nav">
+<footer class="footer" role="contentinfo" aria-label="Pied de page">
+    <nav class="footer_nav" aria-label="Navigation secondaire">
         <h2 class="footer_nav_title">Navigation</h2>
         <ul class="footer_nav_container">
             <?php foreach (dw_get_navigation_links('footer') as $link): ?>
@@ -16,16 +16,16 @@
             <?php endforeach; ?>
         </ul>
     </nav>
-    <section class="networks">
-        <h2 class="footer_title">Réseaux</h2>
+    <section class="networks" aria-labelledby="footer-networks-title">
+        <h2 id="footer-networks-title" class="footer_title">Réseaux</h2>
 
         <ul class="list">
             <li class="list_item">Github</li>
             <li class="list_item">Linkedin</li>
         </ul>
     </section>
-    <section class="contact_details">
-        <h2 class="footer_title">Coordonnées</h2>
+    <section class="contact_details" aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title" class="footer_title">Coordonnées</h2>
 
         <ul class="list">
             <li class="list_item">+32 497 54 69 43</li>

@@ -2,9 +2,10 @@
 <?php if (have_rows('projet')): ?>
     <?php while (have_rows('projet')) : the_row(); ?>
         <?php if (get_row_layout() == 'single_projet'): ?>
-            <section class="single_projet">
+            <section class="single_projet" aria-labelledby="projet-title">
                 <div class="single_projet_head">
-                    <h2 class="single_projet_title"><?php the_sub_field('single_projet_title'); ?></h2>
+                    <h2 class="single_projet_title"
+                        id="projet-title"><?php the_sub_field('single_projet_title'); ?></h2>
                     <?= responsive_image(get_sub_field('single_projet_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
                     <svg class="border">
                         <use xlink:href="#border"></use>
@@ -20,7 +21,7 @@
                             <?php if (get_sub_field('single_project_choice') === true): ?>
                                 <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
                             <?php elseif (get_sub_field('single_project_fig')) : $galeries = get_sub_field('single_project_fig') ?>
-                                <div class="single_projet_galerie">
+                                <div class="single_projet_galerie" role="list" aria-label="Galerie d’images du projet">
                                     <?php foreach ($galeries as $galerie): ?>
                                         <?= responsive_image($galerie, ['lazy' => 'true', 'classes' => 'stage__image']) ?>
                                     <?php endforeach ?>
@@ -35,9 +36,10 @@
         <?php endif; ?>
 
         <?php if (get_row_layout() == 'contact_redirect'): ?>
-            <section class="contact_redirect">
+            <section class="contact_redirect" aria-labelledby="contact-title">
                 <div class="contact_redirect_container">
-                    <h2 class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
+                    <h2 id="contact-title"
+                        class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
                     <svg class="arrow">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -47,7 +49,8 @@
                 if ($button): ?>
                     <a href="<?php echo esc_url($button['url']); ?>"
                        target="<?php echo esc_attr($button['target'] ?: '_self'); ?>"
-                       class="contact_redirect_button">
+                       class="contact_redirect_button"
+                       aria-label="Aller vers la page : <?php echo esc_html($button['title']); ?>">
                         <?php echo esc_html($button['title']); ?>
                     </a>
                 <?php endif; ?>
