@@ -7,7 +7,7 @@
 }
 
 .presentation {
-  height: calc(100vh - 99.21px);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   position: relative;
@@ -45,7 +45,7 @@
   }
 
   .b1 {
-    top: -10px;
+    bottom: 100px;
     left: -56px;
   }
 
@@ -55,7 +55,6 @@
   }
 
   .r2 {
-    bottom: 300px;
     left: -136px;
     transform: scaleX(-1);
   }
@@ -131,7 +130,7 @@
           width: 30px;
           height: 30px;
           z-index: -1;
-          top: 0;
+          bottom: 0;
           right: 30px;
         }
       }

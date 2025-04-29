@@ -4,9 +4,11 @@
   justify-content: space-between;
   padding-top: 0.625rem;
   margin: 0 1rem;
+  height: 110px;
 
   &_button_menu {
     z-index: 1;
+
     input[type="checkbox"] {
       position: absolute;
       left: -100vw;
@@ -39,7 +41,7 @@
     }
 
     .menu + label span::before {
-      top: -10px;
+      top: 20px;
     }
 
     .menu + label span::after {
@@ -52,7 +54,7 @@
 
     .menu:checked + label span::after,
     .menu:checked + label span::before {
-      top: 0;
+      top: 10px;
     }
 
     .menu:checked + label span::before {
@@ -79,6 +81,12 @@
 
   &_svg_content {
     position: relative;
+    width: 150px;
+
+    .headerSvg {
+      width: 150px;
+      height: 100px;
+    }
 
     a {
       display: block;
@@ -106,7 +114,7 @@
     .nav_container {
       list-style-type: none;
       padding-left: 0;
-      margin-top: 6rem;
+      margin-top: 8rem;
     }
 
     .nav_item {

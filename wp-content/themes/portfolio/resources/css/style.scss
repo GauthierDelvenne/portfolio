@@ -1,25 +1,28 @@
-@import 'utils/reset';
-@import "utils/hidden";
-@import "general/header";
-@import "general/frontpage";
-@import "general/footer";
-@import "general/headline";
-@import "general/about";
-@import "general/contact";
-@import "general/projects";
-@import "settings/media";
+@use 'utils/reset';
+@use "utils/hidden";
+@use "general/header";
+@use "general/frontpage";
+@use "general/footer";
+@use "general/headline";
+@use "general/about";
+@use "general/contact";
+@use "general/projects";
+@use "general/single-project";
+@use "settings/media";
 @import "settings/colors";
 @import "settings/fonts";
 html {
   background-color: $backgroundColor;
   color: $primaryColor;
 }
+
 body {
   position: relative;
   min-height: 100vh;
   z-index: 0;
   font-size: 16px;
   font-family: $textFont;
+
 }
 
 body::before {
@@ -27,8 +30,10 @@ body::before {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: url("../img/background.webp") no-repeat center center / cover;
-  opacity: 0.2;
+  background:
+          url("../img/background.webp") no-repeat center center / cover,
+          #000;
+  opacity: 0.6;
   z-index: -1;
   pointer-events: none;
 }
