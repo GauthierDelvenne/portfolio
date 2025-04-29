@@ -34,11 +34,16 @@ class ContactForm
     // Gère le traitement du formulaire
     public function handle(array $data): void
     {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
         // Valide les données envoyées
         if (is_array($errors = $this->validate($data))) {
             // Stocke les erreurs en session et redirige vers la page précédente
             $_SESSION['portfolio_contact_form_errors'] = $errors;
-            wp_safe_redirect($_SERVER['HTTP_REFERER']);
+            $_SESSION['portfolio_contact_form_old'] = $data;
+            wp_safe_redirect(home_url('/contact'));
             exit;
         }
 
@@ -59,7 +64,7 @@ class ContactForm
 
         // Stocke un message de succès en session et redirige vers la page précédente
         $_SESSION['portfolio_contact_form_success'] = 'Merci ' . $data['lastname'] . ', votre message a bien été envoyé';
-        wp_safe_redirect($_SERVER['HTTP_REFERER']);
+        wp_safe_redirect(home_url('/contact'));
         exit;
     }
 
