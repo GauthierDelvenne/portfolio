@@ -6,6 +6,9 @@
                 <div class="single_projet_head">
                     <h2 class="single_projet_title"><?php the_sub_field('single_projet_title'); ?></h2>
                     <?= responsive_image(get_sub_field('single_projet_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                    <svg class="border">
+                        <use xlink:href="#border"></use>
+                    </svg>
                 </div>
                 <?php if (have_rows('single_projet_content')): ?>
                     <?php while (have_rows('single_projet_content')) : the_row(); ?>
@@ -33,7 +36,12 @@
 
         <?php if (get_row_layout() == 'contact_redirect'): ?>
             <section class="contact_redirect">
-                <h2 class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
+                <div class="contact_redirect_container">
+                    <h2 class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
+                    <svg class="arrow">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </div>
                 <?php
                 $button = get_sub_field('contact_redirect_button');
                 if ($button): ?>
