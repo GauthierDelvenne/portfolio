@@ -7,7 +7,7 @@ $taxonomy = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
 
 $args = [
     'post_type' => 'project',
-    'posts_per_page' => 8,
+    'posts_per_page' => 6,
     'paged' => $paged,
 ];
 
