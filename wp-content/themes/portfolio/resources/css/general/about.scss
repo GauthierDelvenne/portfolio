@@ -94,14 +94,7 @@ main {
       right: -80px;
     }
   }
-
-  .skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  .skills-container{
     position: relative;
 
     .border2 {
@@ -111,6 +104,17 @@ main {
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+
+
 
     .skill_name {
       display: flex;
