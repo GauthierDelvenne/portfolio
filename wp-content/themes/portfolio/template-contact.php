@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <section class="forms" aria-labelledby="contact-title">
     <div class="forms_information_container">
-        <h2 class="form_title"  id="contact-title"><?php the_title(); ?></h2>
+        <h2 aria-level="2" class="form_title"  id="contact-title"><?php the_title(); ?></h2>
         <svg class="underline">
             <use xlink:href="#underline"></use>
         </svg>
@@ -11,11 +11,11 @@
         </svg>
     </div>
 
-    <div class="forms_information" aria-labelledby="info-title">
-        <p class="forms_information_title" id="info-title"><?= get_field('form_information_title'); ?></p>
-        <div class="forms_information_content">
-            <p><?= get_field('form_information_phone'); ?></p>
-            <p><?= get_field('form_information_mail'); ?></p>
+    <div class="forms_information">
+        <p class="forms_information_title"><?= get_field('form_information_title'); ?></p>
+        <div class="forms_information_content" itemscope itemtype="http://schema.org/Person">
+            <p itemprop="telephone"><?= get_field('form_information_phone'); ?></p>
+            <p itemprop="email"><?= get_field('form_information_mail'); ?></p>
         </div>
     </div>
     <?php

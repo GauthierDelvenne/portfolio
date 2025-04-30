@@ -5,9 +5,9 @@
               fill="white"/>
     </svg>
 </div>
-<footer class="footer" role="contentinfo" aria-label="Pied de page">
+<footer class="footer">
     <nav class="footer_nav" aria-label="Navigation secondaire">
-        <h2 class="footer_nav_title">Navigation</h2>
+        <h2 aria-level="2" class="footer_nav_title">Navigation</h2>
         <ul class="footer_nav_container">
             <?php foreach (dw_get_navigation_links('footer') as $link): ?>
                 <li class="nav_item">
@@ -17,7 +17,7 @@
         </ul>
     </nav>
     <section class="networks" aria-labelledby="footer-networks-title">
-        <h2 id="footer-networks-title" class="footer_title">Réseaux</h2>
+        <h2 aria-level="2" id="footer-networks-title" class="footer_title">Réseaux</h2>
 
         <ul class="list">
             <li class="list_item">Github</li>
@@ -25,13 +25,17 @@
         </ul>
     </section>
     <section class="contact_details" aria-labelledby="footer-contact-title">
-        <h2 id="footer-contact-title" class="footer_title">Coordonnées</h2>
+        <h2 aria-level="2" id="footer-contact-title" class="footer_title">Coordonnées</h2>
 
-        <ul class="list">
-            <li class="list_item">+32 497 54 69 43</li>
-            <li class="list_item">gauthier.delvenne@student.hepl.be</li>
-            <li class="list_item">Cours d’Omalius</li>
-            <li class="list_item">4160 Anthisnes</li>
+        <ul class="list" itemscope itemtype="http://schema.org/Person">
+            <li class="list_item" itemprop="telephone">+32 497 54 69 43</li>
+            <li class="list_item" itemprop="email">gauthier.delvenne@student.hepl.be</li>
+            <li class="list_item" itemprop="courseMode">Cours d’Omalius</li>
+            <li class="list_item">
+        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">4160 Anthisnes</span>
+        </span>
+            </li>
         </ul>
     </section>
 

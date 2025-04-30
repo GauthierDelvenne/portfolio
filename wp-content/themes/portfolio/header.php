@@ -2,8 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
           content="Site présentant le portfolio de Delvenne Gauthier, au travers de ses compétences et ses projets">
@@ -26,12 +25,12 @@
 require __DIR__ . '/resources/svg/spriteSVG.php'
 ?>
 <header class="header">
-    <h1 class="hidden"><?= get_bloginfo('name') ?></h1>
+    <h1 aria-level="1" class="hidden"><?= get_bloginfo('name') ?></h1>
     <div class="header_button_menu">
         <input class="menu" type="checkbox" id="menu" aria-controls="navigation">
-        <label for="menu" aria-label="Ouvrir le menu"><span></span></label>
-        <nav id="navigation" class="header_nav" role="navigation" aria-label="Menu principal">
-            <h2 class="hidden">Navigation principal</h2>
+        <label for="menu"><span></span></label>
+        <nav id="navigation" class="header_nav" aria-label="Menu principal">
+            <h2 aria-level="2" class="hidden">Navigation principal</h2>
             <ul class="nav_container">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav_item">

@@ -15,16 +15,17 @@
                 <svg class="rightCloud r2">
                     <use xlink:href="#rightCloud"></use>
                 </svg>
-                <h2 id="presentation-title" class="hidden">Présentation de ma personne</h2>
-                <div class="presentation_me">
+                <h2 aria-level="2" id="presentation-title" class="hidden">Présentation de ma personne</h2>
+                <div class="presentation_me" itemscope itemtype="http://schema.org/Person">
                     <div class="presentation_me_container">
-                        <p class="presentation_me_hook" aria-label="Accroche personnelle"><?php the_sub_field('presentation_title'); ?></p>
+                        <p class="presentation_me_hook"><?php the_sub_field('presentation_title'); ?></p>
                         <svg class="middleCloud m1">
                             <use xlink:href="#middleCloud"></use>
                         </svg>
 
                     </div>
-                    <p class="presentation_me_profession" aria-label="Profession"><?php the_sub_field('presentation_profession'); ?></p>
+                    <p class="presentation_me_profession"
+                       itemprop="jobTitle"><?php the_sub_field('presentation_profession'); ?></p>
                 </div>
                 <svg class="mountain">
                     <use xlink:href="#mountain"></use>
@@ -39,39 +40,46 @@
             <section class="discover" aria-labelledby="discover-title">
             <div class="discover_content">
                 <div class="discover_content_title">
-                    <h2 id="discover-title"><?php the_sub_field('discover_title_h2'); ?></h2>
+                    <h2 aria-level="2" id="discover-title"><?php the_sub_field('discover_title_h2'); ?></h2>
                     <svg class="underline">
                         <use xlink:href="#underline"></use>
                     </svg>
                 </div>
-                <p aria-label="Contenu de la section découverte"><?php the_sub_field('discover_content'); ?></p>
+                <p><?php the_sub_field('discover_content'); ?></p>
                 <svg class="middleCloud">
                     <use xlink:href="#middleCloud"></use>
                 </svg>
             </div>
-            <div class="discover_projects" aria-label="Projets à découvrir">
+            <div class="discover_projects"  >
         <?php elseif (get_row_layout() == 'discover_project'): ?>
-            <article class="discover_project" aria-labelledby="project-title-<?php echo get_row_index(); ?>">
+            <article class="discover_project" aria-labelledby="project-title-<?php echo get_row_index(); ?>" itemscope
+                     itemtype="http://schema.org/Project">
                 <svg class="border">
                     <use xlink:href="#border"></use>
                 </svg>
-                <a href="<?= get_sub_field('discover_link'); ?>" aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>"></a>
+                <a href="<?= get_sub_field('discover_link'); ?>"
+                   aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>" itemprop="url"><span
+                            class="hidden"> Voir le projet : <?php the_sub_field('discover_title_h3'); ?></span></a>
                 <div class="discover_project_title">
-                    <h3 id="project-title-<?php echo get_row_index(); ?>"><?php the_sub_field('discover_title_h3'); ?></h3>
+                    <h3 aria-level="3" id="project-title-<?php echo get_row_index(); ?>" itemprop="name"><?php the_sub_field('discover_title_h3'); ?></h3>
                     <svg class="round">
                         <use xlink:href="#round"></use>
                     </svg>
                 </div>
-                <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
             </article>
         <?php elseif (get_row_layout() == 'discover_project_2'): ?>
-            <article class="discover_project" aria-labelledby="project-title-<?php echo get_row_index(); ?>">
+            <article class="discover_project" aria-labelledby="project-title-<?php echo get_row_index(); ?>" itemscope
+                     itemtype="http://schema.org/Project">
                 <svg class="border">
                     <use xlink:href="#border"></use>
                 </svg>
-                <a href="<?= get_sub_field('discover_link'); ?>" aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>"></a>
-                <h3 id="project-title-<?php echo get_row_index(); ?>" lang="la"><?php the_sub_field('discover_title_h3'); ?></h3>
-                <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'true', 'classes' => 'stage__image']) ?>
+                <a class="hidden" href="<?= get_sub_field('discover_link'); ?>"
+                   aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>" itemprop="url"><span
+                            class="hidden"> Voir le projet : <?php the_sub_field('discover_title_h3'); ?></span></a>
+                <h3 aria-level="3" id="project-title-<?php echo get_row_index(); ?>" itemprop="name"
+                    lang="la"><?php the_sub_field('discover_title_h3'); ?></h3>
+                <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
             </article>
             </div>
             </section>
