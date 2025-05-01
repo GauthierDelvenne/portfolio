@@ -7,6 +7,7 @@
 }
 
 .presentation {
+
   min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
@@ -67,7 +68,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-
   }
 }
 
@@ -78,7 +78,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 4.375rem;
+    gap: 7rem;
     margin-bottom: 2rem;
 
     &_title {
@@ -92,15 +92,15 @@
       .underline {
         position: absolute;
         height: 1rem;
-        width: 100px;
+        width: 6.25rem;
         top: 10px;
         right: 20px;
       }
     }
 
     p {
-      width: 10.938rem;
-      font-size: 0.875rem;
+      width: clamp(10.938rem, 5vw + 10rem, 16rem);
+      font-size: clamp(0.875rem, 1vw + 0.5rem, 1.25rem);
       font-family: $textFont;
       line-height: normal;
     }
@@ -126,8 +126,8 @@
         .round {
           color: $cta;
           position: absolute;
-          width: 30px;
-          height: 30px;
+          width: 1.875rem;
+          height: 1.875rem;
           z-index: -1;
           bottom: 0;
           right: 30px;
@@ -136,8 +136,8 @@
 
       .border {
         position: absolute;
-        width: 190px;
-        height: 190px;
+        height: clamp(11.875rem, 5vw + 11rem, 17rem);
+        width: clamp(11.875rem, 5vw + 11rem, 17rem);
         top: -10px;
         left: -8px;
       }
@@ -162,8 +162,8 @@
         order: -1;
 
         img {
-          width: 10.938rem;
-          height: 10.938rem;
+          width: clamp(10.938rem, 5vw + 10rem, 16rem);
+          height: clamp(10.938rem, 5vw + 10rem, 16rem);
           object-fit: cover;
           object-position: top;
         }
