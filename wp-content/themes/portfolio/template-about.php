@@ -10,7 +10,7 @@
                 <svg class="rightCloud">
                     <use xlink:href="#rightCloud"></use>
                 </svg>
-                <h2  aria-level="2" class="hidden" id="about-me-title">À propos de moi</h2>
+                <h2 aria-level="2" class="hidden" id="about-me-title">À propos de moi</h2>
                 <div class="border_img">
                     <?= responsive_image(get_sub_field('about_me_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
                     <svg class="border">
@@ -18,10 +18,10 @@
                     </svg>
                 </div>
                 <div class="about_me_content">
-                    <svg class="icon">
-                        <use xlink:href="#icon"></use>
-                    </svg>
                     <p>
+                        <svg class="icon">
+                            <use xlink:href="#icon"></use>
+                        </svg>
                         <span itemprop="familyName"><?php the_sub_field('about_me_lastname'); ?> </span>
                         <span itemprop="givenName"> <?php the_sub_field('about_me_firstname'); ?></span>
                     </p>
@@ -77,24 +77,26 @@
                         <use xlink:href="#bubbles"></use>
                     </svg>
                 </div>
-                <?php if (have_rows('assets')): ?>
-                    <?php while (have_rows('assets')) : the_row(); ?>
-                        <article>
-                            <svg class="border3">
-                                <use xlink:href="#border3"></use>
-                            </svg>
-                            <h3 aria-level="3" class="hidden"><?php the_sub_field('about_asset_article_title'); ?></h3>
-                            <div class="asset_container">
-                                <?= responsive_image(get_sub_field('about_asset_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
-                                <svg class="backgroundAtout">
-                                    <use xlink:href="#backgroundAtout"></use>
+                <div class="about_asset_articles">
+                    <?php if (have_rows('assets')): ?>
+                        <?php while (have_rows('assets')) : the_row(); ?>
+                            <article>
+                                <svg class="border3">
+                                    <use xlink:href="#border3"></use>
                                 </svg>
-                            </div>
-                            <p class="about_asset_content"><?php the_sub_field('about_asset_content'); ?></p>
-                        </article>
-                    <?php endwhile; ?>
-
-                <?php endif; ?>
+                                <h3 aria-level="3"
+                                    class="hidden"><?php the_sub_field('about_asset_article_title'); ?></h3>
+                                <div class="asset_container">
+                                    <?= responsive_image(get_sub_field('about_asset_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
+                                    <svg class="backgroundAtout">
+                                        <use xlink:href="#backgroundAtout"></use>
+                                    </svg>
+                                </div>
+                                <p class="about_asset_content"><?php the_sub_field('about_asset_content'); ?></p>
+                            </article>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
             </section>
         <?php endif; ?>
         <?php if (get_row_layout() == 'contact_redirect'): ?>
