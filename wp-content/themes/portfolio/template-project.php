@@ -31,82 +31,86 @@ $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) 
 ?>
 
 <?php if (have_rows('project')): ?>
-    <?php while (have_rows('project')) : the_row(); ?>
-        <?php if (get_row_layout() == 'project_title'): ?>
-        <div class="container_title">
-            <p class="title"><?php the_sub_field('title'); ?></p>
-            <svg class="underline">
-                <use xlink:href="#underline"></use>
-            </svg>
-            <svg class="rightCloud">
-                <use xlink:href="#rightCloud"></use>
-            </svg>
+<?php while (have_rows('project')) :
+the_row(); ?>
+<?php if (get_row_layout() == 'project_title'): ?>
+<section class="projects">
+    <div class="container_title">
+        <h2 class="title" aria-level="2"><?php the_sub_field('title'); ?></h2>
+        <svg class="underline">
+            <use xlink:href="#underline"></use>
+        </svg>
+        <svg class="rightCloud">
+            <use xlink:href="#rightCloud"></use>
+        </svg>
+    </div>
+    <div class="filters">
+        <p class="title"><?php the_sub_field('title_filter'); ?></p>
+        <div class="filters_choice">
+            <a href="<?= esc_url(get_permalink()); ?>"
+               class="<?= ($current_filter === '') ? 'active-project' : ''; ?>"
+               aria-label="Filtrer par : tout">
+                <?= __('Tout', 'hepl-trad'); ?>
+            </a>
+            <?php foreach ($terms as $term): ?>
+                <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
+                   class="<?= ($current_filter === $term->slug) ? 'active-project' : ''; ?>"
+                   aria-label="Filtrer par : <?= esc_html($term->name); ?>">
+                    <?= esc_html($term->name); ?>
+                </a>
+            <?php endforeach; ?>
         </div>
-            <div class="filters">
-                <p class="title"><?php the_sub_field('title_filter'); ?></p>
-                <div class="filters_choice">
-                    <a href="<?= esc_url(get_permalink()); ?>"
-                       class="<?= ($current_filter === '') ? 'active-project' : ''; ?>"
-                       aria-label="Filtrer par : tout">
-                        <?= __('Tout', 'hepl-trad'); ?>
-                    </a>
-                    <?php foreach ($terms as $term): ?>
-                        <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
-                           class="<?= ($current_filter === $term->slug) ? 'active-project' : ''; ?>"
-                           aria-label="Filtrer par : <?= esc_html($term->name); ?>">
-                            <?= esc_html($term->name); ?>
-                        </a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        <?php endif; ?>
+    </div>
+    <?php endif; ?>
     <?php endwhile; ?>
-<?php endif; ?>
+    <?php endif; ?>
 
-<?php if ($query->have_posts()) : ?>
-    <div class="project-list" >
-        <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <article class="project" aria-labelledby="project-title-<?php the_ID(); ?>">
-                <h2 aria-level="2" id="project-title-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>" aria-label="Voir le projet : <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                <?php if (have_rows('projet')) : ?>
-                    <?php while (have_rows('projet')) :
-                        the_row(); ?>
-                        <?php if (get_row_layout() == 'single_projet') : ?>
-                        <?= responsive_image(get_sub_field('single_projet_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
-                        <svg class="border">
-                            <use xlink:href="#border"></use>
-                        </svg>
+    <?php if ($query->have_posts()) : ?>
+        <div class="project-list">
+            <?php while ($query->have_posts()) : $query->the_post(); ?>
+                <article class="project" aria-labelledby="project-title-<?php the_ID(); ?>">
+                    <a href="<?php the_permalink(); ?>" aria-label="Voir le projet : <?php the_title(); ?>"></a>
+                    <h3 aria-level="3" id="project-title-<?php the_ID(); ?>"><?php the_title(); ?></h3>
+                    <?php if (have_rows('projet')) : ?>
+                        <?php while (have_rows('projet')) :
+                            the_row(); ?>
+                            <?php if (get_row_layout() == 'single_projet') : ?>
+                            <?= responsive_image(get_sub_field('single_projet_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
+                            <svg class="border">
+                                <use xlink:href="#border"></use>
+                            </svg>
+                        <?php endif; ?>
+                        <?php endwhile; ?>
                     <?php endif; ?>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </article>
-        <?php endwhile; ?>
-    </div>
-    <div class="pagination">
-        <?php
-        echo paginate_links([
-            'total' => $query->max_num_pages,
-            'current' => $paged,
-            'prev_text' => __hepl('&laquo; Précédent'),
-            'next_text' => __hepl('Suivant &raquo;'),
-        ]);
-        ?>
-    </div>
+                </article>
+            <?php endwhile; ?>
+        </div>
+        <div class="pagination">
+            <?php
+            echo paginate_links([
+                'total' => $query->max_num_pages,
+                'current' => $paged,
+                'prev_text' => __hepl('&laquo; Précédent'),
+                'next_text' => __hepl('Suivant &raquo;'),
+            ]);
+            ?>
+        </div>
 
-    <?php wp_reset_postdata(); ?>
-<?php else : ?>
-    <p class="not_found">Aucun projet trouvé.</p>
-<?php endif; ?>
-
+        <?php wp_reset_postdata(); ?>
+    <?php else : ?>
+        <p class="not_found">Aucun projet trouvé.</p>
+    <?php endif; ?>
+</section>
 <?php if (have_rows('project')): ?>
     <?php while (have_rows('project')) : the_row(); ?>
         <?php if (get_row_layout() == 'presentation_redirect'): ?>
             <section class="presentation_redirect" aria-label="Redirection vers la page de présentation">
                 <div class="presentation_redirect_container">
-                <h2 aria-level="2" class="presentation_redirect_title"><?php the_sub_field('presentation_redirect_title'); ?></h2>
-                <svg class="icon">
-                    <use xlink:href="#icon"></use>
-                </svg>
+                    <h2 aria-level="2"
+                        class="presentation_redirect_title"><?php the_sub_field('presentation_redirect_title'); ?></h2>
+                    <svg class="icon">
+                        <use xlink:href="#icon"></use>
+                    </svg>
                 </div>
                 <?php
                 $button = get_sub_field('presentation_redirect_link');

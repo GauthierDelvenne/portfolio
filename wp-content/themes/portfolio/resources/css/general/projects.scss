@@ -1,49 +1,69 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 
-.container_title {
-  position: relative;
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 
-  .title {
-    margin: 50px 2rem 50px;
-  }
+  .container_title {
+    position: relative;
 
-  .underline {
-    position: absolute;
-    height: 1rem;
-    width: 100px;
-    top: 5px;
-    z-index: -1;
-  }
+    margin: 3.125rem 2rem;
 
-  .rightCloud {
-    position: absolute;
-    top: -60px;
-    right: -60px;
+    .underline {
+      position: absolute;
+      height: 1rem;
+      width: 6.25rem;
+      top: 10px;
+      left: -20px;
+      z-index: -1;
+    }
+
+    .rightCloud {
+      position: absolute;
+      top: -60px;
+      right: -60px;
+    }
   }
 }
 
 .title {
   font-family: $headFont;
   font-size: 1rem;
-  margin: 0 2rem;
 }
 
-.filters {
-  margin-bottom: 60px;
 
-  a {
-    padding: 0.7rem;
-    background-color: $primaryColor;
-    color: $backgroundColor;
-    border-radius: 0.7rem;
-  }
+.filters {
+  margin-bottom: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 
   &_choice {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
+
+    a {
+      padding: 0.7rem;
+      background-color: $primaryColor;
+      color: $backgroundColor;
+      border-radius: 0.7rem;
+      text-decoration: none;
+      transition: padding 0.3s, background-color 0.3s;
+    }
+
+    a:hover,
+    a:focus {
+      padding: 0.9rem;
+      background-color: $cta;
+      color: $primaryColor;
+    }
   }
 }
 
@@ -55,32 +75,38 @@
   .project {
     position: relative;
 
+    a {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
     img {
-      width: 8rem;
-      height: 8rem;
+      width: clamp(8rem, 15vw, 20rem);
+      height: clamp(8rem, 15vw, 20rem);
       object-fit: cover;
       object-position: top;
     }
 
-    h2 {
+    h3 {
       position: absolute;
       bottom: 10px;
       right: 0;
       z-index: 1;
+      color: $backgroundColor;
+      background-color: $primaryColor;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
 
-      a {
-        color: $backgroundColor;
-        text-decoration: none;
-        background-color: $primaryColor;
-        padding: 0.2rem;
-        border-radius: 0.3rem;
-      }
     }
 
     .border {
       position: absolute;
-      width: 140px;
-      height: 140px;
+      width: clamp(8.75rem, 15.75vw, 20.75rem);
+      height: clamp(8.75rem, 15.75vw, 20.75rem);
       top: -10px;
       left: -8px;
     }
@@ -94,14 +120,15 @@
   gap: 1rem;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: 100px;
-  position: relative;
+  margin-top: 6.25rem;
 
   &_container {
+    position: relative;
+
     .icon {
       position: absolute;
-      width: 70px;
-      height: 50px;
+      width: 4.375rem;
+      height: 3.125rem;
       right: 30px;
       top: -20px;
     }
@@ -140,6 +167,7 @@
     opacity: 0.7;
   }
 }
-.not_found{
+
+.not_found {
   text-align: center;
 }
