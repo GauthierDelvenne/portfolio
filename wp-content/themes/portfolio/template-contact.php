@@ -84,7 +84,7 @@
             </fieldset>
             <div class="form_submit">
                 <input type="hidden" name="action" value="portfolio_contact_form_submit">
-                <button type="submit" class="btn" aria-label="Envoyer le formulaire de contact">Envoyer</button>
+                <button type="submit" class="btn hoverCursor" aria-label="Envoyer le formulaire de contact">Envoyer</button>
             </div>
         </form>
     <?php endif ?>

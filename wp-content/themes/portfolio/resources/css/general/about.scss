@@ -1,6 +1,7 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 @import "../settings/breakpoints";
+@import "../settings/redirect";
 
 main {
   overflow-x: hidden;
@@ -186,9 +187,10 @@ main {
   @include tablet {
     align-content: inherit;
   }
+
   &_title {
     position: relative;
-      margin: 7.5rem 0 5rem;
+    margin: 7.5rem 0 5rem;
 
     .underline {
       position: absolute;
@@ -301,12 +303,12 @@ main {
   }
 
   &_button {
-    background-color: $primaryColor;
-    border-radius: 0.625rem;
-    padding: 0.75rem 2.5rem;
-    color: $backgroundColor;
-    text-decoration: none;
-    width: fit-content;
+
+    @include redirect;
+
+    &:hover, &:focus {
+      @include hover-focus;
+    }
   }
 }
 

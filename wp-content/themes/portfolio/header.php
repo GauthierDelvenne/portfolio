@@ -28,19 +28,19 @@ require __DIR__ . '/resources/svg/spriteSVG.php'
     <h1 aria-level="1" class="hidden"><?= get_bloginfo('name') ?></h1>
     <div class="header_button_menu">
         <input class="menu" type="checkbox" id="menu" aria-controls="navigation">
-        <label for="menu"><span></span></label>
+        <label class="hoverCursor" for="menu"><span></span></label>
         <nav id="navigation" class="header_nav" aria-label="Menu principal">
             <h2 aria-level="2" class="hidden">Navigation principal</h2>
             <ul class="nav_container">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav_item">
-                        <a href="<?= $link->href; ?>" class="nav__link"><?= $link->label; ?> </a>
+                        <a class="hoverCursor" href="<?= $link->href; ?>" class="nav__link"><?= $link->label; ?> </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         </nav>
     </div>
-    <div class="header_svg_content">
+    <div class="header_svg_content hoverCursor">
         <a href="<?= dirname($_SERVER['SCRIPT_NAME']) ?>">
             <span class="hidden">Retourner à la page d’accueil</span>
             <svg class="headerSvg">
@@ -49,7 +49,7 @@ require __DIR__ . '/resources/svg/spriteSVG.php'
         </a>
     </div>
 
-    <p class="header_lang"><abbr title="English">EN</abbr></p>
+    <p class="header_lang hoverCursor"><abbr title="English">EN</abbr></p>
 </header>
 <main>
 

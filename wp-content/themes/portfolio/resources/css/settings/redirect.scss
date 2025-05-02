@@ -1,0 +1,30 @@
+@import "colors";
+$redirect: (
+        background-color: $primaryColor,
+        border-radius: 0.625rem,
+        padding: 0.75rem 2.5rem,
+        color: $backgroundColor,
+        text-decoration: none,
+        width: fit-content,
+        transition: all .3s ease
+);
+
+$hoverFocus: (
+        padding: 0.85rem 2.65rem,
+        font-weight: bold
+);
+
+@mixin redirect {
+  background-color: map-get($redirect, background-color);
+  border-radius: map-get($redirect, border-radius);
+  padding: map-get($redirect, padding);
+  color: map-get($redirect, color);
+  text-decoration: map-get($redirect, text-decoration);
+  width: map-get($redirect, width);
+  transition: map-get($redirect, transition);
+}
+
+@mixin hover-focus {
+  padding: map-get($hoverFocus, padding);
+  font-weight: map-get($hoverFocus, font-weight);
+}

@@ -1,5 +1,7 @@
 @import "../settings/fonts";
 @import "../settings/colors";
+@import "../settings/redirect";
+
 
 .projects {
   display: flex;
@@ -55,15 +57,14 @@
       color: $backgroundColor;
       border-radius: 0.7rem;
       text-decoration: none;
-      transition: padding 0.3s, background-color 0.3s;
+      transition: all .3s ease;
+
+      &:hover, &:focus {
+        @include hover-focus;
+      }
     }
 
-    a:hover,
-    a:focus {
-      padding: 0.9rem;
-      background-color: $cta;
-      color: $primaryColor;
-    }
+
   }
 }
 
@@ -139,12 +140,12 @@
   }
 
   &_button {
-    background-color: $primaryColor;
-    border-radius: 0.625rem;
-    padding: 0.75rem 2.5rem;
-    color: $backgroundColor;
-    text-decoration: none;
-    width: fit-content;
+    @include redirect;
+
+    &:hover, &:focus {
+      @include hover-focus;
+    }
+
   }
 }
 

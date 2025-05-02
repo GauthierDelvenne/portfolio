@@ -57,7 +57,7 @@
                 <svg class="border">
                     <use xlink:href="#border"></use>
                 </svg>
-                <a href="<?= get_sub_field('discover_link'); ?>"
+                <a class="hoverCursor" href="<?= get_sub_field('discover_link'); ?>"
                    aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>" itemprop="url"><span
                             class="hidden"> Voir le projet : <?php the_sub_field('discover_title_h3'); ?></span></a>
                 <div class="discover_project_title">
@@ -74,7 +74,7 @@
                 <svg class="border">
                     <use xlink:href="#border"></use>
                 </svg>
-                <a class="hidden" href="<?= get_sub_field('discover_link'); ?>"
+                <a class="hoverCursor" href="<?= get_sub_field('discover_link'); ?>"
                    aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>" itemprop="url"><span
                             class="hidden"> Voir le projet : <?php the_sub_field('discover_title_h3'); ?></span></a>
                 <h3 aria-level="3" id="project-title-<?php echo get_row_index(); ?>" itemprop="name"

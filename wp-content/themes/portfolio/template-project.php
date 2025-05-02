@@ -48,13 +48,13 @@ the_row(); ?>
         <p class="title"><?php the_sub_field('title_filter'); ?></p>
         <div class="filters_choice">
             <a href="<?= esc_url(get_permalink()); ?>"
-               class="<?= ($current_filter === '') ? 'active-project' : ''; ?>"
+               class="<?= ($current_filter === '') ? 'active-project' : ''; ?> hoverCursor"
                aria-label="Filtrer par : tout">
                 <?= __('Tout', 'hepl-trad'); ?>
             </a>
             <?php foreach ($terms as $term): ?>
                 <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
-                   class="<?= ($current_filter === $term->slug) ? 'active-project' : ''; ?>"
+                   class="<?= ($current_filter === $term->slug) ? 'active-project' : ''; ?> hoverCursor"
                    aria-label="Filtrer par : <?= esc_html($term->name); ?>">
                     <?= esc_html($term->name); ?>
                 </a>
@@ -69,7 +69,7 @@ the_row(); ?>
         <div class="project-list">
             <?php while ($query->have_posts()) : $query->the_post(); ?>
                 <article class="project" aria-labelledby="project-title-<?php the_ID(); ?>">
-                    <a href="<?php the_permalink(); ?>" aria-label="Voir le projet : <?php the_title(); ?>"></a>
+                    <a class="hoverCursor" href="<?php the_permalink(); ?>" aria-label="Voir le projet : <?php the_title(); ?>"></a>
                     <h3 aria-level="3" id="project-title-<?php the_ID(); ?>"><?php the_title(); ?></h3>
                     <?php if (have_rows('projet')) : ?>
                         <?php while (have_rows('projet')) :
@@ -117,7 +117,7 @@ the_row(); ?>
                 if ($button): ?>
                     <a href="<?= esc_url($button['url']); ?>"
                        target="<?= esc_attr($button['target'] ?: '_self'); ?>"
-                       class="presentation_redirect_button"
+                       class="presentation_redirect_button hoverCursor"
                        aria-label="Lien vers la page : <?= esc_html($button['title']); ?>">
                         <?= esc_html($button['title']); ?>
                     </a>

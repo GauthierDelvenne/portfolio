@@ -49,7 +49,7 @@
                 if ($button): ?>
                     <a href="<?php echo esc_url($button['url']); ?>"
                        target="<?php echo esc_attr($button['target'] ?: '_self'); ?>"
-                       class="contact_redirect_button"
+                       class="contact_redirect_button hoverCursor"
                        aria-label="Aller vers la page : <?php echo esc_html($button['title']); ?>">
                         <?php echo esc_html($button['title']); ?>
                     </a>
