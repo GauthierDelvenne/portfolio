@@ -1,7 +1,13 @@
 @import "../settings/fonts";
 @import "../settings/colors";
+@import "../settings/breakpoints";
 
 .forms {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+
   &_information {
     text-align: center;
 
@@ -10,34 +16,32 @@
         margin-top: 1.5rem;
       }
 
-      margin-bottom: 48px;
+      margin-bottom: 3rem;
     }
 
     &_title {
       font-size: 1.25rem;
       font-family: $headFont;
-
     }
 
     &_container {
-      .form_title {
-        margin: 50px 2rem 50px;
-      }
-
       position: relative;
+        margin: 3.125rem 2rem;
 
       .underline {
         position: absolute;
         height: 1rem;
-        width: 100px;
-        top: 5px;
+        width: 6.25rem;
+        top: 10px;
+        left: -20px;
         z-index: -1;
+
       }
 
       .rightCloud {
         position: absolute;
         top: -60px;
-        right: -60px;
+        right: -80px;
       }
     }
   }
@@ -53,12 +57,12 @@
       }
 
       .b1 {
-        left: -50px;
+        left: -200px;
         top: 50px;
       }
 
       .b2 {
-        right: -50px;
+        right: -200px;
         bottom: 50px;
       }
 
@@ -68,21 +72,22 @@
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 0.625rem;
         margin-bottom: 2rem;
         position: relative;
 
         .round {
           position: absolute;
-          width: 50px;
-          height: 50px;
+          width: 3.125rem;
+          height: 3.125rem;
           color: $thirdColor;
-          right: 20px;
+          right: -15px;
           z-index: -1;
         }
 
         input, textarea {
           width: 70vw;
+          max-width: 450px;
           padding: 0.8rem;
           border-radius: 0.4rem;
           font-family: $textFont;
@@ -97,11 +102,9 @@
       .btn {
         font-family: $textFont;
         width: 70vw;
+        max-width: 450px;
         padding: 0.5rem;
-
         border-radius: 0.4rem;
-
-
       }
     }
   }
