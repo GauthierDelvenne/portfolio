@@ -12,7 +12,7 @@ main {
   @include tablet-up {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: clamp(1rem, 5vw, 5rem);
   }
 
   .bigCloud {
@@ -31,14 +31,14 @@ main {
     justify-content: center;
 
     img {
-      width: 12.5rem;
+      width: clamp(12.5rem, 5vw + 10rem, 16rem);
       background-color: $backgroundColor;
     }
 
     .border {
       position: absolute;
       top: 0;
-      width: 12.5rem;
+      width: clamp(12.5rem, 5vw + 10rem, 16rem);
       height: 100%;
     }
   }
@@ -64,30 +64,38 @@ main {
 
     p:nth-child(1), p:nth-child(2) {
       font-family: $headFont;
-      font-size: 1.5rem;
+      font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
       margin-top: 0.8rem;
     }
 
     p:nth-child(2) {
-      font-size: 1.25rem;
+      font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
     }
 
     p:nth-child(3) {
       margin-top: 0.8rem;
-      width: 18.75rem;
+      width: clamp(18.75rem, 5vw + 16rem, 20rem);
+      font-size: clamp(1rem, 0.3vw + 1rem, 1.25rem);
     }
   }
 }
 
 .about_skill {
   margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  @include mobil {
+    align-content: inherit;
+  }
+  @include tablet {
+    align-content: inherit;
+  }
 
   &_title {
     position: relative;
-
-    h2 {
-      margin: 7.5rem 0 5rem;
-    }
+    margin: 7.5rem 0 5rem;
 
     .underline {
       position: absolute;
@@ -96,7 +104,6 @@ main {
       top: 10px;
       left: -20px;
       z-index: -1;
-
     }
 
     .bigCloud {
@@ -110,6 +117,7 @@ main {
     position: relative;
     display: flex;
     justify-content: center;
+
     .border2 {
       position: absolute;
       height: 34.375rem;
@@ -168,13 +176,19 @@ main {
 
 .about_asset {
   margin: 0 2rem;
-
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  @include mobil {
+    align-content: inherit;
+  }
+  @include tablet {
+    align-content: inherit;
+  }
   &_title {
     position: relative;
-
-    h2 {
       margin: 7.5rem 0 5rem;
-    }
 
     .underline {
       position: absolute;
@@ -199,7 +213,8 @@ main {
       height: 3.125rem;
     }
   }
-  &_articles{
+
+  &_articles {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -208,6 +223,7 @@ main {
     gap: 10rem;
     margin: 0 1.25rem 9.375rem;
   }
+
   article {
     display: flex;
     flex-direction: column;
