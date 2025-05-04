@@ -50,13 +50,13 @@ the_row(); ?>
             <a href="<?= esc_url(get_permalink()); ?>"
                class="<?= ($current_filter === '') ? 'active-project' : ''; ?> hoverCursor"
                aria-label="Filtrer par : tout">
-                <?= __('Tout', 'hepl-trad'); ?>
+                <?= __hepl('Tout'); ?>
             </a>
             <?php foreach ($terms as $term): ?>
                 <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
                    class="<?= ($current_filter === $term->slug) ? 'active-project' : ''; ?> hoverCursor"
                    aria-label="Filtrer par : <?= esc_html($term->name); ?>">
-                    <?= esc_html($term->name); ?>
+                    <?= esc_html(__($term->name, 'hepl-trad')); ?>
                 </a>
             <?php endforeach; ?>
         </div>

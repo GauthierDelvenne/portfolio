@@ -30,7 +30,7 @@ require __DIR__ . '/resources/svg/spriteSVG.php'
         <input class="menu" type="checkbox" id="menu" aria-controls="navigation">
         <label class="hoverCursor" for="menu"><span></span></label>
         <nav id="navigation" class="header_nav" aria-label="Menu principal">
-            <h2 aria-level="2" class="hidden">Navigation principal</h2>
+            <h2 aria-level="2" class="hidden"><?=__hepl('Navigation principal');?></h2>
             <ul class="nav_container">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav_item">
@@ -42,14 +42,25 @@ require __DIR__ . '/resources/svg/spriteSVG.php'
     </div>
     <div class="header_svg_content hoverCursor">
         <a href="<?= dirname($_SERVER['SCRIPT_NAME']) ?>">
-            <span class="hidden">Retourner à la page d’accueil</span>
+            <span class="hidden"><?=__hepl('Retourner à la page d’accueil');?></span>
             <svg class="headerSvg">
                 <use xlink:href="#headerSvg"></use>
             </svg>
         </a>
     </div>
 
-    <p class="header_lang hoverCursor"><abbr title="English">EN</abbr></p>
+    <div class="languages hoverCursor">
+        <ul class="languages__container">
+            <?php foreach (pll_the_languages(['raw' => true]) as $lang): ?>
+                <?php if (!$lang['current_lang']):?>
+                    <li class="languages__item">
+                        <a href="<?= $lang['url'] ?>" lang="<?= $lang['locale'] ?>" hreflang="<?= $lang['locale'] ?>"
+                           class="languages__link"><?= strtoupper(substr($lang['locale'], 0, 2))?></a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 </header>
 <main>
 

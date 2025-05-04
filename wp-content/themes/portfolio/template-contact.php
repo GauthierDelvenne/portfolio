@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <section class="forms" aria-labelledby="contact-title">
     <div class="forms_information_container">
-        <h2 aria-level="2" class="form_title"  id="contact-title"><?php the_title(); ?></h2>
+        <h2 aria-level="2" class="form_title" id="contact-title"><?php the_title(); ?></h2>
         <svg class="underline">
             <use xlink:href="#underline"></use>
         </svg>
@@ -29,9 +29,10 @@
     <?php if ($success): ?>
         <p class="field_success"><?= $success; ?></p>
     <?php else : ?>
-        <form action="<?= esc_url(admin_url('admin-post.php')); ?>" method="POST" class="form" aria-labelledby="contact-title">
+        <form action="<?= esc_url(admin_url('admin-post.php')); ?>" method="POST" class="form"
+              aria-labelledby="contact-title">
             <fieldset class="form_fields" aria-labelledby="form-legend">
-                <legend id="form-legend" class="hidden">Formulaire de contact</legend>
+                <legend id="form-legend" class="hidden"><?= __hepl('Formulaire de contact'); ?></legend>
                 <svg class="bigCloud b1">
                     <use xlink:href="#bigCloud"></use>
                 </svg>
@@ -39,8 +40,9 @@
                     <use xlink:href="#bigCloud"></use>
                 </svg>
                 <div class="field">
-                    <label for="lastname" class="field_label">Nom</label>
-                    <input type="text" name="lastname" id="lastname" class="field_input" placeholder="Votre nom"
+                    <label for="lastname" class="field_label"><?= __hepl('Nom'); ?></label>
+                    <input type="text" name="lastname" id="lastname" class="field_input"
+                           placeholder="<?= __hepl('Votre nom'); ?>"
                            value="<?= esc_attr($old['lastname'] ?? '') ?>">
                     <?php if (isset($errors['lastname'])): ?>
                         <p class="field_error"><?= $errors['lastname']; ?></p>
@@ -50,33 +52,36 @@
                     <svg class="round">
                         <use xlink:href="#round"></use>
                     </svg>
-                    <label for="email" class="field_label">Adresse mail</label>
-                    <input type="email" name="email" id="email" class="field_input" placeholder="Votre adresse mail"
+                    <label for="email" class="field_label"><?= __hepl('Adresse mail'); ?></label>
+                    <input type="email" name="email" id="email" class="field_input"
+                           placeholder="<?= __hepl('Votre adresse mail'); ?>"
                            value="<?= esc_attr($old['email'] ?? '') ?>">
                     <?php if (isset($errors['email'])): ?>
                         <p class="field_error"><?= $errors['email']; ?></p>
                     <?php endif ?>
                 </div>
                 <div class="field">
-                    <label for="phone" class="field_label">Numéro de téléphone</label>
+                    <label for="phone" class="field_label"><?= __hepl('Numéro de téléphone'); ?></label>
                     <input type="tel" name="phone" id="phone" class="field_input"
-                           placeholder="Votre numéro de téléphone"
+                           placeholder="<?= __hepl('Votre numéro de téléphone'); ?>"
                            value="<?= esc_attr($old['phone'] ?? '') ?>">
                     <?php if (isset($errors['phone'])): ?>
                         <p class="field_error"><?= $errors['phone']; ?></p>
                     <?php endif ?>
                 </div>
                 <div class="field">
-                    <label for="subject" class="field_label">Sujet</label>
-                    <input type="text" name="subject" id="subject" class="field_input" placeholder="Votre sujet"
+                    <label for="subject" class="field_label"><?= __hepl('Sujet'); ?></label>
+                    <input type="text" name="subject" id="subject" class="field_input"
+                           placeholder="<?= __hepl('Votre sujet'); ?>"
                            value="<?= esc_attr($old['subject'] ?? '') ?>">
                     <?php if (isset($errors['subject'])): ?>
                         <p class="field_error"><?= $errors['subject']; ?></p>
                     <?php endif ?>
                 </div>
                 <div class="field">
-                    <label for="message" class="field_label">Message</label>
-                    <textarea name="message" id="message" class="field_input" placeholder="Votre texte"><?= esc_textarea($old['message'] ?? '') ?></textarea>
+                    <label for="message" class="field_label"><?= __hepl('Message'); ?></label>
+                    <textarea name="message" id="message" class="field_input"
+                              placeholder="<?= __hepl('Votre texte'); ?>"><?= esc_textarea($old['message'] ?? '') ?></textarea>
                     <?php if (isset($errors['message'])): ?>
                         <p class="field_error"><?= $errors['message']; ?></p>
                     <?php endif ?>
@@ -84,7 +89,9 @@
             </fieldset>
             <div class="form_submit">
                 <input type="hidden" name="action" value="portfolio_contact_form_submit">
-                <button type="submit" class="btn hoverCursor" aria-label="Envoyer le formulaire de contact">Envoyer</button>
+                <button type="submit" class="btn hoverCursor"
+                        aria-label="Envoyer le formulaire de contact"><?= __hepl('Envoyer'); ?>
+                </button>
             </div>
         </form>
     <?php endif ?>

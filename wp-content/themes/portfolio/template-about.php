@@ -10,7 +10,7 @@
                 <svg class="rightCloud">
                     <use xlink:href="#rightCloud"></use>
                 </svg>
-                <h2 aria-level="2" class="hidden" id="about-me-title">À propos de moi</h2>
+                <h2 aria-level="2" class="hidden" id="about-me-title"><?=__hepl('À propos de moi');?></h2>
                 <div class="border_img">
                     <?= responsive_image(get_sub_field('about_me_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
                     <svg class="border">

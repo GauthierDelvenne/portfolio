@@ -3,7 +3,7 @@
 </div>
 <footer class="footer">
     <nav class="footer_nav" aria-label="Navigation secondaire">
-        <h2 aria-level="2" class="footer_nav_title">Navigation</h2>
+        <h2 aria-level="2" class="footer_nav_title"><?=__hepl('Navigation');?></h2>
         <ul class="footer_nav_container">
             <?php foreach (dw_get_navigation_links('footer') as $link): ?>
                 <li class="nav_item">
@@ -13,7 +13,7 @@
         </ul>
     </nav>
     <section class="networks" aria-labelledby="footer-networks-title">
-        <h2 aria-level="2" id="footer-networks-title" class="footer_title">Réseaux</h2>
+        <h2 aria-level="2" id="footer-networks-title" class="footer_title"><?=__hepl('Réseaux');?></h2>
 
         <ul class="list">
             <li class="list_item"><a class="hoverCursor" href="https://github.com/GauthierDelvenne">Github</a></li>
@@ -21,7 +21,7 @@
         </ul>
     </section>
     <section class="contact_details" aria-labelledby="footer-contact-title">
-        <h2 aria-level="2" id="footer-contact-title" class="footer_title">Coordonnées</h2>
+        <h2 aria-level="2" id="footer-contact-title" class="footer_title"><?=__hepl('Coordonnées');?></h2>
 
         <ul class="list" itemscope itemtype="http://schema.org/Person">
             <li class="list_item" itemprop="telephone">+32 497 54 69 43</li>

@@ -15,7 +15,7 @@
                 <svg class="rightCloud r2">
                     <use xlink:href="#rightCloud"></use>
                 </svg>
-                <h2 aria-level="2" id="presentation-title" class="hidden">Présentation de ma personne</h2>
+                <h2 aria-level="2" id="presentation-title" class="hidden"><?=__hepl('Présentation de ma personne');?></h2>
                 <div class="presentation_me" itemscope itemtype="http://schema.org/Person">
                     <div class="presentation_me_container">
                         <p class="presentation_me_hook"><?php the_sub_field('presentation_title'); ?></p>
