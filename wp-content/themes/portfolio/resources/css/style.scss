@@ -37,4 +37,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
 }
-
+.js-only {
+  display: none;
+}
+.js-enabled .js-only {
+  display: block;
+}

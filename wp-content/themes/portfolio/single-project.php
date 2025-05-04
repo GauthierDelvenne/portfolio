@@ -26,11 +26,26 @@
                             <?php if (get_sub_field('single_project_choice') === true): ?>
                                 <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'lazy', 'classes' => 'single_project_img']) ?>
                             <?php elseif (get_sub_field('single_project_fig')) : $galeries = get_sub_field('single_project_fig') ?>
-                                <div class="single_projet_galerie">
-                                    <?php foreach ($galeries as $galerie): ?>
-                                        <?= responsive_image($galerie, ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
-                                    <?php endforeach ?>
+                                <div class="splide js-only" aria-label="Splide Basic HTML Example">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <?php foreach ($galeries as $galerie): ?>
+                                                <li class="splide__slide">
+                                                    <?= responsive_image($galerie, ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
+                                                </li>
+                                            <?php endforeach ?>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <noscript>
+                                    <div class="noscript-gallery">
+                                        <?php foreach ($galeries as $galerie): ?>
+                                            <div class="noscript-slide">
+                                                <?= responsive_image($galerie, ['classes' => 'stage__image']) ?>
+                                            </div>
+                                        <?php endforeach ?>
+                                    </div>
+                                </noscript>
                             <?php else : ?>
 
                             <?php endif ?>
@@ -39,6 +54,7 @@
                 <?php endif; ?>
             </section>
         <?php endif; ?>
+
 
         <?php if (get_row_layout() == 'contact_redirect'): ?>
             <section class="contact_redirect" aria-labelledby="contact-title">
@@ -64,4 +80,53 @@
     <?php endwhile; else: ?>
     <p><?= __hepl('Ce projet n’existe pas encore'); ?>&hellip;</p>
 <?php endif; ?>
+<?php
+$current_id = get_the_ID(); // ID du projet actuel
+
+$args = [
+    'post_type' => 'project',           // Slug de ton CPT
+    'posts_per_page' => 3,                   // Nombre de projets à afficher
+    'post__not_in' => [$current_id],       // Exclure le projet en cours
+    'orderby' => 'rand',              // Optionnel : affichage aléatoire
+];
+
+$related_projects = new WP_Query($args);
+
+if ($related_projects->have_posts()): ?>
+    <section class="other_projects" aria-labelledby="autres-projets-title">
+        <div class="container">
+            <h2 id="autres-projets-title" class="section-title">Autres projets</h2>
+            <div class="other_projects_grid">
+                <?php while ($related_projects->have_posts()): $related_projects->the_post(); ?>
+                    <article class="project_item">
+                        <a href="<?php the_permalink(); ?>" class="hoverCursor"
+                           aria-label="Voir le projet : <?php the_title(); ?>"></a>
+                        <div>
+                            <?php if (have_rows('projet')): ?>
+                                <?php while (have_rows('projet')) : the_row(); ?>
+                                    <?php if (get_row_layout() == 'single_projet'): ?>
+                                        <?php
+                                        $image = get_sub_field('single_projet_img');
+                                        if ($image):
+                                            echo responsive_image($image, ['lazy' => 'lazy', 'classes' => 'project_item_img']);
+                                        endif;
+                                        ?>
+                                    <?php endif; ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                            <svg class="border">
+                                <use xlink:href="#border"></use>
+                            </svg>
+                        </div>
+                        <h3 class="project_item_title"><?php the_title(); ?></h3>
+
+                    </article>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+    <?php wp_reset_postdata(); ?>
+<?php endif; ?>
+
+
 <?php get_footer(); ?>

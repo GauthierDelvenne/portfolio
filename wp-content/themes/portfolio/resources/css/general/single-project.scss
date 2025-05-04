@@ -1,6 +1,7 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 @import "../settings/breakpoints";
+@import '@splidejs/splide/css';
 
 
 .single_projet {
@@ -22,7 +23,7 @@
       bottom: 0.8rem;
       background-color: $backgroundColor;
       padding: 0.3rem;
-      border-radius: 0.6rem;
+      border-radius: 0.625rem;
     }
 
     .border {
@@ -50,12 +51,13 @@
     gap: 1rem;
     margin-bottom: 4rem;
     justify-content: start;
-    @include tablet-up {
+    @include desktop-up {
       width: auto;
 
     }
+
     &:nth-of-type(3) {
-        justify-content: end;
+      justify-content: end;
       @include tablet-up {
         flex-direction: row;
       }
@@ -90,16 +92,23 @@
       gap: 0.8rem;
       max-width: 400px;
       transition: max-width 0.8s ease-in-out;
+
+      &:nth-of-type(1) {
+        max-width: none;
+      }
+
       @include desktop-xl-up {
-      max-width: 600px;
+        max-width: 600px;
+
       }
-      }
+    }
 
     p {
       font-size: 1.2rem;
       @include desktop-xl-up {
-      font-size: 1.4rem;
+        font-size: 1.4rem;
       }
+
       &:first-child {
         font-size: 1.5rem;
         font-weight: bold;
@@ -109,11 +118,33 @@
       }
     }
 
-    .single_projet_galerie {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
+    .splide__pagination {
+      bottom: -1rem;
+    }
 
+    .splide__arrow--prev {
+      left: 13rem;
+      @include desktop-up {
+        left: 0;
+
+      }
+
+    }
+
+    .splide__arrow--next {
+      right: 13rem;
+      @include desktop-up {
+        right: 0;
+
+      }
+    }
+
+    .noscript-gallery {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .splide__slide, .noscript-slide {
       img {
         min-width: 7.5rem;
         max-height: 7.5rem;
@@ -122,8 +153,69 @@
         @include tablet-up {
           min-width: 12rem;
           max-height: 12rem;
+          border-radius: 0.625rem;
+
         }
       }
     }
+  }
+}
+
+.other_projects {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+  }
+
+  .project_item_title {
+    text-align: center;
+  }
+
+  .project_item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+
+    a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    div {
+      position: relative;
+      .border {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 7.5rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    display: block;
   }
 }
