@@ -1,0 +1,14 @@
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-40%, -40%);
+  z-index: 2;
+  transition: transform 0.3s ease-out;
+  path,svg{
+    transition: fill 0.3s ease;
+  }
+  path{
+    fill: rgba(255, 131, 93, 0.7);
+
+  }
+}

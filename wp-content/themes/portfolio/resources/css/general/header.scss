@@ -1,3 +1,5 @@
+@import "../settings/fonts";
+@import "../settings/colors";
 
 .header {
   display: flex;
@@ -25,7 +27,7 @@
     }
 
     .menu + label span {
-      background: #fff;
+      background: $primaryColor;
       width: 2rem;
       height: 0.313rem;
       position: relative;
@@ -34,7 +36,7 @@
     .menu + label span::before,
     .menu + label span::after {
       position: absolute;
-      background: #fff;
+      background: $primaryColor;
       width: inherit;
       height: inherit;
       content: "";
@@ -122,15 +124,21 @@
 
       a {
         font-size: 1.25rem;
-        color: #fff;
+        color: $primaryColor;
         text-decoration: none;
         opacity: 0;
       }
     }
   }
 
-  &_lang {
+  .languages {
     align-self: center;
+    a {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $primaryColor;
+      text-decoration: none;
+    }
   }
 }
 

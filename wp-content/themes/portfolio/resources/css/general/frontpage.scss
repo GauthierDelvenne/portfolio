@@ -14,7 +14,7 @@
   justify-content: center;
   position: relative;
   overflow-x: hidden;
-  margin-bottom: 3.125rem;
+  margin-bottom: clamp(3.125rem,5vw,6rem);
 
   &_me {
     display: flex;
@@ -148,6 +148,7 @@
         width: clamp(11.875rem, 5vw + 11rem, 17rem);
         top: -10px;
         left: -8px;
+
       }
 
       h3 {
