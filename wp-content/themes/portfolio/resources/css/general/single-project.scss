@@ -1,5 +1,6 @@
 @import "../settings/fonts";
 @import "../settings/colors";
+@import "../settings/breakpoints";
 
 
 .single_projet {
@@ -13,7 +14,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 6.5rem;
 
     .single_projet_title {
       font-size: 1.5rem;
@@ -25,39 +26,86 @@
     }
 
     .border {
-      width: 360px;
-      height: 100%;
+      width: 71vw;
+      max-width: 52.5rem;
+      height: 110%;
       position: absolute;
+      top: -15px;
     }
 
     img {
+      width: 70vw;
+      max-width: 52.5rem;
       max-height: 22.5rem;
-      aspect-ratio: 16/9;
+      -o-object-fit: cover;
       object-fit: cover;
-      object-position: 0 -1.25rem;
-      border-radius: 3.125rem;
+      border-radius: .625rem;
     }
   }
+
   &_content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     width: 80vw;
-    gap: 0.4rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    justify-content: start;
+    @include tablet-up {
+      width: auto;
 
+    }
     &:nth-of-type(3) {
-      flex-direction: row;
-      justify-content: end;
-
+        justify-content: end;
+      @include tablet-up {
+        flex-direction: row;
+      }
     }
 
     &:nth-of-type(5) {
-      text-align: end;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+      text-align: center;
     }
 
+    picture {
+      width: fit-content;
+
+      .single_project_img {
+        display: none;
+
+        @include tablet-up {
+          display: block;
+          min-width: 12rem;
+          max-height: 12rem;
+          object-fit: cover;
+          border-radius: 0.625rem;
+        }
+      }
+    }
+
+    .single_project_text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      max-width: 400px;
+      transition: max-width 0.8s ease-in-out;
+      @include desktop-xl-up {
+      max-width: 600px;
+      }
+      }
+
     p {
+      font-size: 1.2rem;
+      @include desktop-xl-up {
+      font-size: 1.4rem;
+      }
       &:first-child {
+        font-size: 1.5rem;
         font-weight: bold;
+        @include desktop-xl-up {
+          font-size: 1.7rem;
+        }
       }
     }
 
@@ -68,10 +116,13 @@
 
       img {
         min-width: 7.5rem;
-        max-height:7.5rem;
+        max-height: 7.5rem;
         object-fit: cover;
         border-radius: 0.625rem;
-
+        @include tablet-up {
+          min-width: 12rem;
+          max-height: 12rem;
+        }
       }
     }
   }

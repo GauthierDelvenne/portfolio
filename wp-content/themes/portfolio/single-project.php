@@ -2,7 +2,8 @@
 <?php if (have_rows('projet')): ?>
     <?php while (have_rows('projet')) : the_row(); ?>
         <?php if (get_row_layout() == 'single_projet'): ?>
-            <section class="single_projet" aria-labelledby="projet-title" itemscope itemtype="http://schema.org/Project">
+            <section class="single_projet" aria-labelledby="projet-title" itemscope
+                     itemtype="http://schema.org/Project">
                 <div class="single_projet_head">
                     <h2 aria-level="2" class="single_projet_title"
                         id="projet-title" itemprop="name"><?php the_sub_field('single_projet_title'); ?></h2>
@@ -14,12 +15,16 @@
                 <?php if (have_rows('single_projet_content')): ?>
                     <?php while (have_rows('single_projet_content')) : the_row(); ?>
                         <div class="single_projet_content">
-                            <p class="single_projet_title" itemprop="headline"><?php the_sub_field('single_projet_title'); ?></p>
-                            <?php if (get_sub_field('single_projet_texte')): ?>
-                                <p class="single_projet_text" itemprop="description"><?php the_sub_field('single_projet_texte'); ?></p>
-                            <?php endif; ?>
+                            <div class="single_project_text">
+                                <p class="single_projet_title"
+                                   itemprop="headline"><?php the_sub_field('single_projet_title'); ?></p>
+                                <?php if (get_sub_field('single_projet_texte')): ?>
+                                    <p class="single_projet_text"
+                                       itemprop="description"><?php the_sub_field('single_projet_texte'); ?></p>
+                                <?php endif; ?>
+                            </div>
                             <?php if (get_sub_field('single_project_choice') === true): ?>
-                                <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
+                                <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'lazy', 'classes' => 'single_project_img']) ?>
                             <?php elseif (get_sub_field('single_project_fig')) : $galeries = get_sub_field('single_project_fig') ?>
                                 <div class="single_projet_galerie">
                                     <?php foreach ($galeries as $galerie): ?>
@@ -57,6 +62,6 @@
             </section>
         <?php endif; ?>
     <?php endwhile; else: ?>
-    <p>Ce projet n’existe pas encore&hellip;</p>
+    <p><?= __hepl('Ce projet n’existe pas encore'); ?>&hellip;</p>
 <?php endif; ?>
 <?php get_footer(); ?>
