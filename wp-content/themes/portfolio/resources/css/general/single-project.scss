@@ -11,6 +11,7 @@
   align-content: center;
   flex-wrap: wrap;
 
+
   &_head {
     position: relative;
     display: flex;
@@ -44,6 +45,12 @@
     }
   }
 
+  .single_projet_content:last-of-type {
+    .single_project_text {
+      max-width: none;
+    }
+  }
+
   &_content {
     display: flex;
     flex-direction: row-reverse;
@@ -51,7 +58,7 @@
     gap: 1rem;
     margin-bottom: 4rem;
     justify-content: start;
-    @include desktop-up {
+    @include widescreen {
       width: auto;
 
     }
@@ -68,6 +75,10 @@
       align-content: center;
       flex-wrap: wrap;
       text-align: center;
+
+      p.single_projet_title {
+        max-width: none;
+      }
     }
 
     picture {
@@ -77,11 +88,11 @@
         display: none;
 
         @include tablet-up {
-          display: block;
-          min-width: 12rem;
-          max-height: 12rem;
+          aspect-ratio: 1 / 1;
+          max-width: 12rem;
           object-fit: cover;
           border-radius: 0.625rem;
+          display: block;
         }
       }
     }
@@ -93,13 +104,8 @@
       max-width: 400px;
       transition: max-width 0.8s ease-in-out;
 
-      &:nth-of-type(1) {
-        max-width: none;
-      }
-
       @include desktop-xl-up {
         max-width: 600px;
-
       }
     }
 
@@ -172,6 +178,7 @@
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 
   }
 
@@ -201,6 +208,7 @@
 
     div {
       position: relative;
+
       .border {
         position: absolute;
         top: 0;
@@ -210,12 +218,21 @@
     }
   }
 
+  .other_projects_grid {
+    display: flex;
+    gap: 1.2rem;
+  }
+
   img {
     aspect-ratio: 1 / 1;
     width: 100%;
-    max-width: 7.5rem;
+    max-width: 12rem;
     object-fit: cover;
     border-radius: 0.625rem;
     display: block;
   }
+}
+
+abbr {
+  text-decoration: none;
 }
