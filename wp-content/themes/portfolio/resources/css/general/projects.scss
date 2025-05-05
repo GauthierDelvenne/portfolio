@@ -1,6 +1,7 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 @import "../settings/redirect";
+@import "../settings/breakpoints";
 
 
 .projects {
@@ -69,10 +70,9 @@
 }
 
 .project-list {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
   .project {
     position: relative;
 
