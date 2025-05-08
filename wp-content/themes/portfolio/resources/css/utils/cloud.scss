@@ -1,0 +1,26 @@
+/* Animation de flottement */
+@keyframes floatCloud {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Appliquer l'animation aux classes correspondantes */
+.bigCloud,
+.rightCloud,
+.middleCloud {
+  animation: floatCloud 6s ease-in-out infinite;
+}
+
+/* Varier la durée et le délai pour éviter une animation trop uniforme */
+.bigCloud.b1 { animation-delay: 0s; }
+.bigCloud.b2 { animation-delay: 2s; animation-duration: 7s; }
+.rightCloud.r1 { animation-delay: 1s; animation-duration: 5s; }
+.rightCloud.r2 { animation-delay: 3s; animation-duration: 6s; }
+.middleCloud.m1 { animation-delay: 0.5s; animation-duration: 5.5s; }

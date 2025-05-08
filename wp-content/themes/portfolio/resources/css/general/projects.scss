@@ -73,6 +73,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
+  position: relative;
+  .bigCloud{
+    position: absolute;
+    left: -200px;
+  }
+  .middleCloud{
+    position: absolute;
+    right: -200px;
+    bottom: 0;
+  }
   .project {
     position: relative;
 

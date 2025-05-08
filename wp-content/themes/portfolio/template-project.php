@@ -67,6 +67,12 @@ the_row(); ?>
 
     <?php if ($query->have_posts()) : ?>
         <div class="project-list">
+            <svg class="bigCloud">
+                <use xlink:href="#bigCloud"></use>
+            </svg>
+            <svg class="middleCloud">
+                <use xlink:href="#middleCloud"></use>
+            </svg>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
                 <article class="project" aria-labelledby="project-title-<?php the_ID(); ?>">
                     <a class="hoverCursor" href="<?php the_permalink(); ?>" aria-label="Voir le projet : <?php the_title(); ?>"></a>

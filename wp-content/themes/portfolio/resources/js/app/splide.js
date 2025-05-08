@@ -1,8 +1,9 @@
 document.documentElement.classList.add('js-enabled');
 
 import Splide from '@splidejs/splide';
-
-var splide = new Splide( '.splide', {
+const splideElement = document.querySelector('.splide');
+if (splideElement) {
+let splide = new Splide( '.splide', {
     perPage: 3,
     breakpoints:{
         1024:{
@@ -13,3 +14,4 @@ var splide = new Splide( '.splide', {
 } );
 
 splide.mount();
+}

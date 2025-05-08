@@ -4,6 +4,12 @@
         <?php if (get_row_layout() == 'single_projet'): ?>
             <section class="single_projet" aria-labelledby="projet-title" itemscope
                      itemtype="http://schema.org/Project">
+                <svg class="rightCloud">
+                    <use xlink:href="#rightCloud"></use>
+                </svg>
+                <svg class="bigCloud">
+                    <use xlink:href="#bigCloud"></use>
+                </svg>
                 <div class="single_projet_head">
                     <h2 aria-level="2" class="single_projet_title"
                         id="projet-title" itemprop="name"><?php the_sub_field('single_projet_title'); ?></h2>
@@ -23,10 +29,19 @@
                                        itemprop="description"><?php the_sub_field('single_projet_texte'); ?></p>
                                 <?php endif; ?>
                             </div>
+
                             <?php if (get_sub_field('single_project_choice') === true): ?>
+                             <div class="single_project_img_container">
                                 <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'lazy', 'classes' => 'single_project_img']) ?>
+                                 <svg class="border">
+                                     <use xlink:href="#border"></use>
+                                 </svg>
+                                </div>
                             <?php elseif (get_sub_field('single_project_fig')) : $galeries = get_sub_field('single_project_fig') ?>
                                 <div class="splide js-only" aria-label="Splide Basic HTML Example">
+                                    <svg class="middleCloud">
+                                        <use xlink:href="#middleCloud"></use>
+                                    </svg>
                                     <div class="splide__track">
                                         <ul class="splide__list">
                                             <?php foreach ($galeries as $galerie): ?>
@@ -39,6 +54,9 @@
                                 </div>
                                 <noscript>
                                     <div class="noscript-gallery">
+                                        <svg class="middleCloud">
+                                            <use xlink:href="#middleCloud"></use>
+                                        </svg>
                                         <?php foreach ($galeries as $galerie): ?>
                                             <div class="noscript-slide">
                                                 <?= responsive_image($galerie, ['classes' => 'stage__image']) ?>
