@@ -7,9 +7,8 @@
     <meta name="description"
           content="Site présentant le portfolio de Delvenne Gauthier, au travers de ses compétences et ses projets">
     <meta name="author" content="Delvenne Gauthier">
-    <meta name="keywords" content="Portfolio, Delvenne Gauthier, compétence, projets, travaux, HEPL, web, design">
+    <meta name="keywords" content="Portfolio, Delvenne Gauthier,portfolio gauthier delvenne, compétence, projets, travaux, HEPL, web, design">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
     <link rel="icon"
@@ -17,8 +16,13 @@
           sizes="32x32"
           href="/wp-content/themes/portfolio/resources/img/mascotte.png">
     <script src="<?= portfolio_asset('js') ?>" defer></script>
-    <?php wp_head(); ?>
 
+    <?php wp_head(); ?>
+    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Nextir Brush.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Jura-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+
+
+    <meta name="google-site-verification" content="HP1zfJTbU92EEcrBfxidMypZXkJBQa3QOIiaBUc_X5g" />
 </head>
 <body>
 <?php
