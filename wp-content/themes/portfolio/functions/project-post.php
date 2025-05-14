@@ -9,6 +9,5 @@ register_post_type('project', [
     'rewrite' => ['slug' => 'projet'],
     'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
     'show_in_rest' => true,
-
 ]);
 

@@ -2,7 +2,7 @@
 add_action('admin_post_portfolio_contact_form_submit', 'portfolio_handle_contact_form_submit');
 add_action('admin_post_nopriv_portfolio_contact_form_submit', 'portfolio_handle_contact_form_submit');
 
-require_once(__DIR__ . '/forms/ContactForm.php');
+require_once(__DIR__ . '/../forms/ContactForm.php');
 
 function portfolio_handle_contact_form_submit()
 {
