@@ -63,7 +63,7 @@ class ContactForm
         ]);
 
         // Stocke un message de succès en session et redirige vers la page précédente
-        $_SESSION['portfolio_contact_form_success'] = 'Merci ' . $data['lastname'] . ', votre message a bien été envoyé';
+        $_SESSION['portfolio_contact_form_success'] = 'Merci madame,monsieur votre message a bien été envoyé';
         wp_safe_redirect(home_url('/contact'));
         exit;
     }
