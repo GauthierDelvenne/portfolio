@@ -26,7 +26,7 @@
         <ul class="list" itemscope itemtype="http://schema.org/Person">
             <li class="list_item" itemprop="telephone">+32 497 54 69 43</li>
             <li class="list_item" itemprop="email">gauthier.delvenne@student.hepl.be</li>
-            <li class="list_item" itemprop="courseMode">Cours d’Omalius</li>
+            <li class="list_item" itemprop="address">Cours d’Omalius</li>
             <li class="list_item">
         <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span itemprop="streetAddress">4160 Anthisnes</span>
