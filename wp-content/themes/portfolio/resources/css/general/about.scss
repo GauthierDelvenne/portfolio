@@ -93,7 +93,12 @@ main {
   @include tablet {
     align-content: inherit;
   }
-
+  h2 {
+    font-size: 1rem;
+    @include tablet-up {
+      font-size: 1.25rem;
+    }
+  }
   &_title {
     position: relative;
     margin: 7.5rem 0 5rem;
@@ -105,6 +110,10 @@ main {
       top: 10px;
       left: -20px;
       z-index: -1;
+      @include tablet-up {
+        height: 1.25rem;
+        width: 10.25rem;
+      }
     }
 
     .bigCloud {
@@ -187,7 +196,12 @@ main {
   @include tablet {
     align-content: inherit;
   }
-
+  h2 {
+    font-size: 1rem;
+    @include tablet-up {
+      font-size: 1.25rem;
+    }
+  }
   &_title {
     position: relative;
     margin: 7.5rem 0 5rem;
@@ -199,6 +213,9 @@ main {
       top: 10px;
       left: -20px;
       z-index: -1;
+      @include tablet-up {
+        height: 1.25rem;
+      }
     }
 
     .middleCloud {

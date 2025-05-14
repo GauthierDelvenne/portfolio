@@ -1,10 +1,14 @@
 @font-face {
   font-family: 'Nextir Brush';
   src: url('/wp-content/themes/portfolio/resources/fonts/Nextir Brush.otf') format('opentype');
+  font-display: swap;
+
 }
 @font-face {
   font-family: 'Jura';
   src: url('/wp-content/themes/portfolio/resources/fonts/Jura-VariableFont_wght.ttf') format('TrueType');
+  font-display: swap;
+
 }
 
 $headFont: 'Nextir Brush', sans-serif;
