@@ -16,10 +16,18 @@
           type="font/woff2" crossorigin>
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
-    <link rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/wp-content/themes/portfolio/resources/img/mascotte.png">
+    <link rel="icon" type="image/png"
+          href="/wp-content/themes/portfolio/resources/svg/favicon/favicon-96x96.png"
+          sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml"
+          href="/wp-content/themes/portfolio/resources/svg/favicon/favicon.svg"/>
+    <link rel="shortcut icon"
+          href="/wp-content/themes/portfolio/resources/svg/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="/wp-content/themes/portfolio/resources/svg/favicon/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="Portfolio"/>
+    <link rel="manifest"
+          href="/wp-content/themes/portfolio/resources/svg/favicon/site.webmanifest"/>
     <script src="<?= portfolio_asset('js') ?>" defer></script>
 
     <?php wp_head(); ?>
