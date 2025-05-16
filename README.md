@@ -11,21 +11,22 @@ Dans le cadre du cours de **Design Web** à la **Haute École de la Province de 
 
 ## Cahier des charges
 ### Contenu attendu
-- **Page d'accueil** avec une présentation personnelle
-- **Page "À propos"** détaillant notre parcours et compétences
-- **Section Portfolio** affichant nos réalisations avec descriptions et images
-- **Page de contact** avec formulaire et liens vers les réseaux sociaux
+- **Page d'accueil** avec des redirections et une landing page personnalisé
+- **Page "À propos"** détaillant mon parcours et mes compétences
+- **Page projets** affichant mes réalisations avec leurs noms et une image
+- **Page projet unique** affichant le projet avec descriptions et images
+- **Page de contact** avec formulaire et autres moyens de contact
 
 ### Contraintes techniques
-- **Nom de domaine personnalisé** (prenom-nom.extension)
+- **Nom de domaine personnalisé** (portfolio.gauthier-delvenne.be)
 - **Site en ligne** pour l'examen de Design Web
 - **Fonctionnalité complète sans JavaScript**
 - **Expérience utilisateur fluide et accessible**
 
 ## Outils et technologies
 - **WordPress** pour la gestion du contenu
-- **HTML5, CSS3 (SASS, Tailwind CSS)** pour la personnalisation
-- **JavaScript (progressive enhancement)**
-- **Figma / Adobe XD** pour la maquette
+- **HTML5, CSS3 (SASS)** pour la personnalisation
+- **JavaScript**
+- **Figma** pour la maquette
 - **Git et GitHub** pour le versioning
-- **Hébergement via Netlify, Vercel ou serveur dédié**
+- **Hébergement via infomaniak**
