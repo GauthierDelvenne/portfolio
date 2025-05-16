@@ -1,6 +1,7 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 @import "../settings/breakpoints";
+@import "../settings/redirect";
 
 .middleCloud, .bigCloud, .rightCloud {
   position: absolute;
@@ -76,18 +77,17 @@
 
   &_content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 7rem;
-    margin-bottom: 2rem;
-    @include desktop {
-      gap: 0;
-    }
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: clamp(3.125rem,5vw,6rem);
+    align-content: center;
+    flex-wrap: wrap;
 
     &_title {
       position: relative;
       height: fit-content;
-
+      text-align: center;
       h2 {
         font-size: 1rem;
         @include tablet-up {
@@ -100,7 +100,7 @@
         height: 1rem;
         width: 6.25rem;
         top: 10px;
-        right: 20px;
+        left: 5px;
         z-index: -1;
         @include tablet-up {
           height: 1.25rem;
@@ -108,14 +108,16 @@
         }
       }
     }
+    .discover_content{
+      &_button {
+      text-decoration: none;
+      color: $primaryColor;
 
-    p {
-      width: clamp(10.938rem, 5vw + 10rem, 16rem);
-      font-size: clamp(0.875rem, 1vw + 0.5rem, 1.25rem);
-      font-family: $textFont;
-      line-height: normal;
-      @include desktop-up {
-        min-width: 30ch;
+        @include redirect;
+
+        &:hover, &:focus {
+          @include hover-focus;
+        }
       }
     }
 
@@ -133,7 +135,12 @@
       display: flex;
       flex-direction: column;
       gap: 0.625rem;
-
+    &:last-child{
+      display: none;
+      @include tablet-up{
+      display: flex;
+    }
+    }
       &_title {
         position: relative;
 

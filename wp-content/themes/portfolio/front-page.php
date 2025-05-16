@@ -45,7 +45,15 @@
                         <use xlink:href="#underline"></use>
                     </svg>
                 </div>
-                <p><?php the_sub_field('discover_content'); ?></p>
+                <?php
+                $button = get_sub_field('discover_content');
+                if ($button): ?>
+                    <a href="<?php echo esc_url($button['url']); ?>"
+                       target="<?php echo esc_attr($button['target'] ?: '_self'); ?>" class="discover_content_button hoverCursor"
+                       aria-label="Aller vers la page : <?= esc_html($button['title']); ?>">
+                        <?php echo esc_html($button['title']); ?>
+                    </a>
+                <?php endif; ?>
                 <svg class="middleCloud">
                     <use xlink:href="#middleCloud"></use>
                 </svg>
@@ -81,9 +89,23 @@
                     lang="la"><?php the_sub_field('discover_title_h3'); ?></h3>
                 <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
             </article>
+        <?php elseif (get_row_layout() == 'discover_project_3'): ?>
+            <article class="discover_project" aria-labelledby="project-title-<?php echo get_row_index(); ?>" itemscope
+                     itemtype="http://schema.org/Project">
+                <svg class="border">
+                    <use xlink:href="#border"></use>
+                </svg>
+                <a class="hoverCursor" href="<?= get_sub_field('discover_link'); ?>"
+                   aria-label="Voir le projet : <?php the_sub_field('discover_title_h3'); ?>" itemprop="url"><span
+                            class="hidden"> Voir le projet : <?php the_sub_field('discover_title_h3'); ?></span></a>
+                <h3 aria-level="3" id="project-title-<?php echo get_row_index(); ?>" itemprop="name"
+                    lang="la"><?php the_sub_field('discover_title_h3'); ?></h3>
+                <?= responsive_image(get_sub_field('discover_img'), ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
+            </article>
             </div>
             </section>
         <?php endif; ?>
+
     <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
