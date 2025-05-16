@@ -24,8 +24,8 @@
         <h2 aria-level="2" id="footer-contact-title" class="footer_title"><?=__hepl('Coordonnées');?></h2>
 
         <ul class="list" itemscope itemtype="http://schema.org/Person">
-            <li class="list_item" itemprop="telephone">+32 497 54 69 43</li>
-            <li class="list_item" itemprop="email">gauthier.delvenne@student.hepl.be</li>
+            <li class="list_item" itemprop="telephone"><a class="hoverCursor" href="tel:32497546943">+32 497 54 69 43</a></li>
+            <li class="list_item" itemprop="email"><a class="hoverCursor" href="mailto:gauthier.delvenne@student.hepl.be">gauthier.delvenne@student.hepl.be</a></li>
             <li class="list_item" itemprop="address">Cours d’Omalius</li>
             <li class="list_item">
         <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
