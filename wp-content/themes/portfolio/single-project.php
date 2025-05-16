@@ -113,7 +113,7 @@ $related_projects = new WP_Query($args);
 if ($related_projects->have_posts()): ?>
     <section class="other_projects" aria-labelledby="autres-projets-title">
         <div class="container">
-            <h2 id="autres-projets-title" class="section-title"><?php __hepl('Autres projets');?></h2>
+            <h2 id="autres-projets-title" class="section-title"><?= __hepl('Autres projets'); ?></h2>
             <div class="other_projects_grid">
                 <?php while ($related_projects->have_posts()): $related_projects->the_post(); ?>
                     <article class="project_item">
