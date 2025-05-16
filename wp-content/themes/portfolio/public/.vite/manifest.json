@@ -1,13 +1,41 @@
 {
   "wp-content/themes/portfolio/resources/css/style.scss": {
-    "file": "assets/css-BdE4aYMF.css",
+    "file": "assets/css-BUeRucZR.css",
     "src": "wp-content/themes/portfolio/resources/css/style.scss",
     "isEntry": true
   },
+  "wp-content/themes/portfolio/resources/fonts/Jura.woff": {
+    "file": "assets/Jura-CUhcw3C3.woff",
+    "src": "wp-content/themes/portfolio/resources/fonts/Jura.woff"
+  },
+  "wp-content/themes/portfolio/resources/fonts/Jura.woff2": {
+    "file": "assets/Jura-DmBE7IXS.woff2",
+    "src": "wp-content/themes/portfolio/resources/fonts/Jura.woff2"
+  },
+  "wp-content/themes/portfolio/resources/fonts/NextirBrush.woff": {
+    "file": "assets/NextirBrush-CO_t8zbQ.woff",
+    "src": "wp-content/themes/portfolio/resources/fonts/NextirBrush.woff"
+  },
+  "wp-content/themes/portfolio/resources/fonts/NextirBrush.woff2": {
+    "file": "assets/NextirBrush-DAOnwVy4.woff2",
+    "src": "wp-content/themes/portfolio/resources/fonts/NextirBrush.woff2"
+  },
+  "wp-content/themes/portfolio/resources/img/background.webp": {
+    "file": "assets/background-DWQHBEQb.webp",
+    "src": "wp-content/themes/portfolio/resources/img/background.webp"
+  },
   "wp-content/themes/portfolio/resources/js/main.js": {
-    "file": "assets/js-l0sNRNKZ.js",
+    "file": "assets/js-BRPrK-Ei.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/resources/js/main.js",
     "isEntry": true
+  },
+  "wp-content/themes/portfolio/resources/svg/separator.svg": {
+    "file": "assets/separator-CVwYDVOL.svg",
+    "src": "wp-content/themes/portfolio/resources/svg/separator.svg"
+  },
+  "wp-content/themes/portfolio/resources/svg/star.svg": {
+    "file": "assets/star-BBi-BN2o.svg",
+    "src": "wp-content/themes/portfolio/resources/svg/star.svg"
   }
 }

@@ -10,7 +10,6 @@ document.body.appendChild(cursorCreation);
 const cursor = document.querySelector('.cursor');
 const path = cursor.querySelector('path');
 const svg = cursor.querySelector('svg');
-console.log(path);
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';

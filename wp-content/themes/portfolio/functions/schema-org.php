@@ -29,7 +29,7 @@ function ajouter_schema_portfolio(): void
               "@type": "Organization",
               "name": "Portfolio de Gauthier Delvenne",
               "url": "<?php echo esc_url(home_url()); ?>",
-      "logo": "<?php echo get_template_directory_uri(); ?>/resources/img/mascotte.png"
+      "logo": "<?php echo get_template_directory_uri(); ?>/resources/svg/favicon/favicon.svg"
     }
         </script>
 

@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-05-13 20:39+0200\n"
+"PO-Revision-Date: 2025-05-13 20:39+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __hepl;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:6
+msgid "Navigation"
+msgstr "Browsing"
+
+#: footer.php:16
+msgid "Réseaux"
+msgstr "Networks"
+
+#: footer.php:24
+msgid "Coordonnées"
+msgstr "Contact details"
+
+#: front-page.php:18
+msgid "Présentation de ma personne"
+msgstr "Introducing myself"
+
+#: header.php:34
+msgid "Navigation principal"
+msgstr "Main navigation"
+
+#: header.php:46
+msgid "Retourner à la page d’accueil"
+msgstr "Back to home page"
+
+#: index.php:11
+msgid "La page est vide"
+msgstr "The page is empty"
+
+#: public/assets/js-BQaZNbGx.js:6
+msgid "left"
+msgstr "left"
+
+#: public/assets/js-BQaZNbGx.js:6
+msgid "right"
+msgstr "right"
+
+#: single-project.php:99
+msgid "Ce projet n’existe pas encore"
+msgstr "This project does not yet exist"
+
+#: single-project.php:116
+msgid "Autres projets"
+msgstr "Other projects"
+
+#: template-about.php:13
+msgid "À propos de moi"
+msgstr "About myself"
+
+#: template-contact.php:35
+msgid "Formulaire de contact"
+msgstr "Contact form"
+
+#: template-contact.php:43
+msgid "Nom"
+msgstr "Name"
+
+#: template-contact.php:45
+msgid "Votre nom"
+msgstr "Your name"
+
+#: template-contact.php:55
+msgid "Adresse mail"
+msgstr "Mail address"
+
+#: template-contact.php:57
+msgid "Votre adresse mail"
+msgstr "Your e-mail address"
+
+#: template-contact.php:64
+msgid "Numéro de téléphone"
+msgstr "Telephone number"
+
+#: template-contact.php:66
+msgid "Votre numéro de téléphone"
+msgstr "Your telephone number"
+
+#: template-contact.php:73
+msgid "Sujet"
+msgstr "Subject"
+
+#: template-contact.php:75
+msgid "Votre sujet"
+msgstr "Your subject"
+
+#: template-contact.php:82
+msgid "Message"
+msgstr "Message"
+
+#: template-contact.php:84
+msgid "Votre texte"
+msgstr "Your text"
+
+#: template-contact.php:93
+msgid "Envoyer"
+msgstr "Send"
+
+#: template-project.php:53
+msgid "Tout"
+msgstr "All"
+
+#: template-project.php:99
+msgid "&laquo; Précédent"
+msgstr "&laquo; Previous"
+
+#: template-project.php:100
+msgid "Suivant &raquo;"
+msgstr "Next &raquo;"
