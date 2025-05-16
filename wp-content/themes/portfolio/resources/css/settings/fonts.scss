@@ -1,12 +1,14 @@
 @font-face {
   font-family: 'Nextir Brush';
-  src: url('/wp-content/themes/portfolio/resources/fonts/Nextir Brush.otf') format('opentype');
+  src: url('/wp-content/themes/portfolio/resources/fonts/NextirBrush.woff2') format('woff2'),
+  url('/wp-content/themes/portfolio/resources/fonts/NextirBrush.woff') format('woff');
   font-display: swap;
-
 }
+
 @font-face {
   font-family: 'Jura';
-  src: url('/wp-content/themes/portfolio/resources/fonts/Jura-VariableFont_wght.ttf') format('TrueType');
+  src: url('/wp-content/themes/portfolio/resources/fonts/Jura.woff2') format('woff2'),
+  url('/wp-content/themes/portfolio/resources/fonts/Jura.woff') format('woff');
   font-display: swap;
 
 }
