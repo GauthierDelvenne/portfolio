@@ -16,6 +16,7 @@
           type="font/woff2" crossorigin>
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
+    <link rel="canonical"  href="https://portfolio.gauthier-delvenne.be/">
     <link rel="icon" type="image/png"
           href="/wp-content/themes/portfolio/resources/svg/favicon/favicon-96x96.png"
           sizes="96x96"/>
