@@ -29,8 +29,6 @@
     <meta name="apple-mobile-web-app-title" content="Portfolio"/>
     <link rel="manifest"
           href="/wp-content/themes/portfolio/resources/svg/favicon/site.webmanifest"/>
-    <script src="<?= portfolio_asset('js') ?>" defer></script>
-
     <?php wp_head(); ?>
 
 
