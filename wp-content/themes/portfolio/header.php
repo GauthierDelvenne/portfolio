@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="fr">
+<html lang="<?= __hepl('fr')?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
-          content="Site présentant le portfolio de Delvenne Gauthier, au travers de ses compétences et ses projets">
+          content="<?= __hepl('Site présentant le portfolio de Delvenne Gauthier, au travers de ses compétences et ses projets')?>">
     <meta name="author" content="Delvenne Gauthier">
     <meta name="keywords"
-          content="Portfolio, Delvenne Gauthier,portfolio gauthier delvenne, compétence, projets, travaux, HEPL, web, design">
+          content="Delvenne Gauthier Portfolio, Portfolio, Delvenne Gauthier, Gauthier, Delvenne, <?= __hepl('compétence')?>, <?= __hepl('projets')?>, <?= __hepl('travaux')?>, HEPL, web, design">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/NextirBrush.woff2" as="font"
           type="font/woff2" crossorigin>

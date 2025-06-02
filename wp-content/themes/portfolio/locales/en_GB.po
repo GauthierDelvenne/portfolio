@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-13 20:39+0200\n"
-"PO-Revision-Date: 2025-05-13 20:39+0200\n"
+"POT-Creation-Date: 2025-06-02 11:16+0200\n"
+"PO-Revision-Date: 2025-06-02 11:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -30,11 +30,35 @@ msgstr "Contact details"
 msgid "Présentation de ma personne"
 msgstr "Introducing myself"
 
-#: header.php:34
+#: header.php:2
+msgid "fr"
+msgstr "en"
+
+#: header.php:8
+msgid ""
+"Site présentant le portfolio de Delvenne Gauthier, au travers de ses "
+"compétences et ses projets"
+msgstr ""
+"Website presenting Delvenne Gauthier's portfolio of skills and "
+"projects"
+
+#: header.php:11
+msgid "compétence"
+msgstr "skill"
+
+#: header.php:11
+msgid "projets"
+msgstr "projects"
+
+#: header.php:11
+msgid "travaux"
+msgstr "Work"
+
+#: header.php:40
 msgid "Navigation principal"
 msgstr "Main navigation"
 
-#: header.php:46
+#: header.php:52
 msgid "Retourner à la page d’accueil"
 msgstr "Back to home page"
 
@@ -42,11 +66,11 @@ msgstr "Back to home page"
 msgid "La page est vide"
 msgstr "The page is empty"
 
-#: public/assets/js-BQaZNbGx.js:6
+#: public/assets/js-BRPrK-Ei.js:6
 msgid "left"
 msgstr "left"
 
-#: public/assets/js-BQaZNbGx.js:6
+#: public/assets/js-BRPrK-Ei.js:6
 msgid "right"
 msgstr "right"
 
