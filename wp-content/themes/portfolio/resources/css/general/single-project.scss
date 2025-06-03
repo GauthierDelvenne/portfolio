@@ -21,7 +21,10 @@
   }
 
   .rightCloud {
-    right: 0;
+    right: -10rem;
+    @include tablet-up{
+      right: 0;
+    }
   }
 
   &_head {
