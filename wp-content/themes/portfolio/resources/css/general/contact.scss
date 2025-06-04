@@ -99,6 +99,12 @@
           padding: 0.8rem;
           border-radius: 0.4rem;
           font-family: $textFont;
+          border: none;
+          resize: none;
+          transition: transform 0.3s ease;
+          &:hover,&:focus{
+            transform: scale(1.05);
+          }
         }
       }
     }
@@ -113,6 +119,11 @@
         max-width: 450px;
         padding: 0.5rem;
         border-radius: 0.4rem;
+        transition: transform 0.3s ease;
+        border: none;
+        &:hover,&:focus{
+          transform: scale(1.05);
+        }
       }
     }
   }

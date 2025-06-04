@@ -112,7 +112,7 @@
 
     &_text {
       max-width: 80vw;
-      transition: max-width 3s ease-in-out;
+      transition: max-width 0.3s ease-in-out;
       @include tablet-up {
         max-width: 60vw;
       }
@@ -142,7 +142,7 @@
     .middleCloud {
 
       left: -120px;
-      transition: left 3s ease-in-out;
+      transition: left 0.3s ease-in-out;
       @include tablet-up {
         left: -70px
       }
@@ -158,6 +158,10 @@
       display: flex;
       flex-direction: column;
       gap: 0.625rem;
+      transition: transform 0.3s ease;
+      &:hover,&:focus{
+        transform: scale(1.02);
+      }
 
       &:last-child {
         display: none;
