@@ -1,16 +1,24 @@
 {
   "wp-content/themes/portfolio/resources/css/style.scss": {
-    "file": "assets/css-rwMYY_ll.css",
+    "file": "assets/css-DCVNzhPB.css",
     "src": "wp-content/themes/portfolio/resources/css/style.scss",
     "isEntry": true
   },
-  "wp-content/themes/portfolio/resources/fonts/Jura.woff": {
-    "file": "assets/Jura-CUhcw3C3.woff",
-    "src": "wp-content/themes/portfolio/resources/fonts/Jura.woff"
+  "wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff": {
+    "file": "assets/Jura-Bold-D4ob7CjC.woff",
+    "src": "wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff"
   },
-  "wp-content/themes/portfolio/resources/fonts/Jura.woff2": {
-    "file": "assets/Jura-DmBE7IXS.woff2",
-    "src": "wp-content/themes/portfolio/resources/fonts/Jura.woff2"
+  "wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff2": {
+    "file": "assets/Jura-Bold-BAe49KVi.woff2",
+    "src": "wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff2"
+  },
+  "wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff": {
+    "file": "assets/Jura-Regular-CjE5afwu.woff",
+    "src": "wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff"
+  },
+  "wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff2": {
+    "file": "assets/Jura-Regular-CG3m5Q5_.woff2",
+    "src": "wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff2"
   },
   "wp-content/themes/portfolio/resources/fonts/NextirBrush.woff": {
     "file": "assets/NextirBrush-DCG8c9s8.woff",

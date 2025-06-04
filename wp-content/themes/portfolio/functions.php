@@ -23,6 +23,3 @@ include_once __DIR__ . '/functions/schema-org.php';
 
 
 
-
-
-

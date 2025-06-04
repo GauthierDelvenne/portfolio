@@ -7,11 +7,20 @@
 
 @font-face {
   font-family: 'Jura';
-  src: url('/wp-content/themes/portfolio/resources/fonts/Jura.woff2') format('woff2'),
-  url('/wp-content/themes/portfolio/resources/fonts/Jura.woff') format('woff');
+  src: url('/wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff2') format('woff2'),
+  url('/wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff') format('woff');
+  font-weight: normal;
   font-display: swap;
-
 }
+
+@font-face {
+  font-family: 'Jura';
+  src: url('/wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff2') format('woff2'),
+  url('/wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff') format('woff');
+  font-weight: bold;
+  font-display: swap;
+}
+
 
 $headFont: 'Nextir Brush', sans-serif;
 $textFont: 'Jura', sans-serif;
