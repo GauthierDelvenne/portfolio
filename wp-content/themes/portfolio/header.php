@@ -1,27 +1,36 @@
 <!doctype html>
-<html lang="<?= __hepl('fr')?>">
+<html lang="<?= __hepl('fr') ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
-          content="<?= __hepl('Site présentant le portfolio de Delvenne Gauthier, au travers de ses compétences et ses projets')?>">
+          content="<?= __hepl('Site présentant le portfolio de Delvenne Gauthier, au travers de ses compétences et ses projets') ?>">
     <meta name="author" content="Delvenne Gauthier">
     <meta name="keywords"
-          content="Delvenne Gauthier Portfolio, Portfolio, Delvenne Gauthier, Gauthier, Delvenne, <?= __hepl('compétence')?>, <?= __hepl('projets')?>, <?= __hepl('travaux')?>, HEPL, web, design">
+          content="Delvenne Gauthier Portfolio, Portfolio, Delvenne Gauthier, Gauthier, Delvenne, <?= __hepl('compétence') ?>, <?= __hepl('projets') ?>, <?= __hepl('travaux') ?>, HEPL, web, design">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/NextirBrush.woff2" as="font"
           type="font/woff2" crossorigin>
-    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Jura.woff2" as="font"
+    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff2" as="font"
           type="font/woff2" crossorigin>
+    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff2" as="font" type="font/woff2"
+          crossorigin>
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
+    <meta property="og:title" content="Portfolio de Gauthier Delvenne"/>
+    <meta property="og:description" content="Découvrez mes projets et compétences en design et développement web."/>
+    <meta property="og:image"
+          content="https://portfolio.gauthier-delvenne.be/wp-content/uploads/2025/04/picture-me.webp"/>
+    <meta property="og:url" content="https://portfolio.gauthier-delvenne.be/"/>
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
-    <link rel="icon" type="image/png" href="/wp-content/themes/portfolio/resources/svg/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/wp-content/themes/portfolio/resources/svg/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/wp-content/themes/portfolio/resources/svg/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/portfolio/resources/svg/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Portfolio" />
-    <link rel="manifest" href="/wp-content/themes/portfolio/resources/svg/favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/wp-content/themes/portfolio/resources/svg/favicon/favicon-96x96.png"
+          sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/wp-content/themes/portfolio/resources/svg/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="/wp-content/themes/portfolio/resources/svg/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="/wp-content/themes/portfolio/resources/svg/favicon/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="Portfolio"/>
+    <link rel="manifest" href="/wp-content/themes/portfolio/resources/svg/favicon/site.webmanifest"/>
     <?php wp_head(); ?>
 
 
