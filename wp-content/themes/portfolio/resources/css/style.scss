@@ -44,3 +44,7 @@ body::before {
 .js-enabled .js-only {
   display: block;
 }
+:focus {
+  outline: 3px solid projects.$primaryColor;
+  outline-offset: 2px;
+}
