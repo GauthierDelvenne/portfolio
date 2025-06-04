@@ -45,6 +45,9 @@
                         <use xlink:href="#underline"></use>
                     </svg>
                 </div>
+                <div class="discover_content_text">
+                    <?php the_sub_field('discover_text'); ?>
+                </div>
                 <?php
                 $button = get_sub_field('discover_content');
                 if ($button): ?>
