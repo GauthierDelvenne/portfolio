@@ -16,8 +16,8 @@
         <h2 aria-level="2" id="footer-networks-title" class="footer_title"><?=__hepl('Réseaux');?></h2>
 
         <ul class="list">
-            <li class="list_item"><a class="hoverCursor" href="https://github.com/GauthierDelvenne">Github</a></li>
-            <li class="list_item"><a class="hoverCursor" href="https://linkedin.com/in/gauthier-delvenne">Linkedin</a></li>
+            <li class="list_item"><a class="hoverCursor" rel="noopener noreferrer" target="_blank" href="https://github.com/GauthierDelvenne">Github</a></li>
+            <li class="list_item"><a class="hoverCursor" rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/gauthier-delvenne">Linkedin</a></li>
         </ul>
     </section>
     <section class="contact_details" aria-labelledby="footer-contact-title">
