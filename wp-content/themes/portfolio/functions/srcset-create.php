@@ -41,8 +41,6 @@ function responsive_image($image, $settings): bool|string
     ob_start();
     ?>
     <picture>
-        <!-- Ici, vous pouvez ajouter manuellement des balises <source> pour d'autres formats (WebP, AVIF, etc.)
-             si ces formats sont disponibles via un plugin ou un traitement personnalisé. -->
         <img
                 src="<?= esc_url($src) ?>"
                 alt="<?= esc_attr($alt) ?>"
