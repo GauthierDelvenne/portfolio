@@ -31,39 +31,29 @@
                             </div>
 
                             <?php if (get_sub_field('single_project_choice') === true): ?>
-                             <div class="single_project_img_container">
-                                <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'lazy', 'classes' => 'single_project_img']) ?>
-                                 <svg class="border">
-                                     <use xlink:href="#border"></use>
-                                 </svg>
+                                <div class="single_project_img_container">
+                                    <?= responsive_image(get_sub_field('single_project_img'), ['lazy' => 'lazy', 'classes' => 'single_project_img']) ?>
+                                    <svg class="border">
+                                        <use xlink:href="#border"></use>
+                                    </svg>
                                 </div>
                             <?php elseif (get_sub_field('single_project_fig')) : $galeries = get_sub_field('single_project_fig') ?>
-                                <div class="splide js-only" aria-label="Splide Basic HTML Example">
+                                <div class="gallery">
                                     <svg class="middleCloud">
                                         <use xlink:href="#middleCloud"></use>
                                     </svg>
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <?php foreach ($galeries as $galerie): ?>
-                                                <li class="splide__slide">
-                                                    <?= responsive_image($galerie, ['lazy' => 'lazy', 'classes' => 'stage__image']) ?>
-                                                </li>
-                                            <?php endforeach ?>
-                                        </ul>
-                                    </div>
+                                    <?php
+                                    $count = 0;
+                                    foreach ($galeries as $galerie):
+                                        if ($count >= 6) break;
+                                        ?>
+                                        <div class="slide">
+                                            <?= responsive_image($galerie, ['classes' => 'stage__image']) ?>
+                                        </div>
+                                        <?php
+                                        $count++;
+                                    endforeach?>
                                 </div>
-                                <noscript>
-                                    <div class="noscript-gallery">
-                                        <svg class="middleCloud">
-                                            <use xlink:href="#middleCloud"></use>
-                                        </svg>
-                                        <?php foreach ($galeries as $galerie): ?>
-                                            <div class="noscript-slide">
-                                                <?= responsive_image($galerie, ['classes' => 'stage__image']) ?>
-                                            </div>
-                                        <?php endforeach ?>
-                                    </div>
-                                </noscript>
                             <?php else : ?>
 
                             <?php endif ?>

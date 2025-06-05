@@ -1,7 +1,6 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 @import "../settings/breakpoints";
-@import '@splidejs/splide/css';
 
 
 .single_projet {
@@ -22,7 +21,7 @@
 
   .rightCloud {
     right: -10rem;
-    @include tablet-up{
+    @include tablet-up {
       right: 0;
     }
   }
@@ -138,9 +137,11 @@
 
     p {
       font-size: 1.2rem;
-      a{
+
+      a {
         color: $primaryColor;
       }
+
       @include desktop-xl-up {
         font-size: 1.4rem;
       }
@@ -154,49 +155,37 @@
       }
     }
 
-    .splide__pagination {
-      bottom: -1rem;
-    }
 
-    .splide__arrow--prev {
-      left: 13rem;
-      @include desktop-up {
-        left: 0;
-
-      }
-
-    }
-
-    .splide__arrow--next {
-      right: 13rem;
-      @include desktop-up {
-        right: 0;
-      }
-    }
-
-    .noscript-gallery, .splide {
+    .gallery, {
       position: relative;
 
       .middleCloud {
         position: absolute;
         right: 0;
+        z-index: -1;
         @include desktop-up {
           right: -70px;
         }
       }
     }
 
-    .noscript-gallery {
+    .gallery {
       display: flex;
       gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .splide__slide, .noscript-slide {
+    .slide {
       img {
         min-width: 7.5rem;
         max-height: 7.5rem;
         object-fit: cover;
         border-radius: 0.625rem;
+        transition: transform 0.3s ease-in-out;
+        &:hover,&:focus{
+        transform: scale(1.2);
+        }
         @include tablet-up {
           min-width: 12rem;
           max-height: 12rem;
@@ -214,6 +203,7 @@
   align-content: center;
   flex-wrap: wrap;
   margin-top: 2.5rem;
+  min-height: 300px;
 
 
   .section-title {
@@ -235,7 +225,9 @@
     justify-content: center;
     position: relative;
     transition: transform 0.3s ease;
-    &:hover,&:focus{
+    height: fit-content;
+
+    &:hover, &:focus {
       transform: scale(1.05);
     }
 
@@ -266,6 +258,8 @@
   .other_projects_grid {
     display: flex;
     gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   img {
