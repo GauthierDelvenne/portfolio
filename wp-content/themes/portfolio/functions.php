@@ -19,6 +19,7 @@ include_once __DIR__ . '/functions/translate.php';
 include_once __DIR__ . '/functions/taxonomy.php';
 include_once __DIR__ . '/functions/disable-cache.php';
 include_once __DIR__ . '/functions/schema-org.php';
+include_once __DIR__ . '/functions/defer.php';
 
 
 
