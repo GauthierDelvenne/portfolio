@@ -10,12 +10,6 @@
     <meta name="keywords"
           content="Delvenne Gauthier Portfolio, Portfolio, Delvenne Gauthier, Gauthier, Delvenne, <?= __hepl('compétence') ?>, <?= __hepl('projets') ?>, <?= __hepl('travaux') ?>, HEPL, web, design">
     <meta name="robots" content="index, follow">
-    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/NextirBrush.woff2" as="font"
-          type="font/woff2" crossorigin>
-    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Jura-Regular.woff2" as="font"
-          type="font/woff2" crossorigin>
-    <link rel="preload" href="/wp-content/themes/portfolio/resources/fonts/Jura-Bold.woff2" as="font" type="font/woff2"
-          crossorigin>
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
     <meta property="og:title" content="Portfolio de Gauthier Delvenne"/>
     <meta property="og:description" content="Découvrez mes projets et compétences en design et développement web."/>
