@@ -51,7 +51,7 @@ require __DIR__ . '/resources/svg/spriteSVG.php'
         </nav>
     </div>
     <div class="header_svg_content hoverCursor">
-        <a href="<?= dirname($_SERVER['SCRIPT_NAME']) ?>">
+        <a href="<?= __hepl('https://portfolio.gauthier-delvenne.be') ?>">
             <span class="hidden"><?= __hepl('Retourner à la page d’accueil'); ?></span>
             <svg class="headerSvg">
                 <use xlink:href="#headerSvg"></use>

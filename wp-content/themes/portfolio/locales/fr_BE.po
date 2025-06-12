@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-02 11:15+0200\n"
-"PO-Revision-Date: 2025-06-02 11:16+0200\n"
+"POT-Creation-Date: 2025-06-12 15:21+0200\n"
+"PO-Revision-Date: 2025-06-12 15:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -54,11 +54,15 @@ msgstr "projets"
 msgid "travaux"
 msgstr "travaux"
 
-#: header.php:40
+#: header.php:43
 msgid "Navigation principal"
 msgstr "Navigation principal"
 
-#: header.php:52
+#: header.php:54
+msgid "https://portfolio.gauthier-delvenne.be"
+msgstr "https://portfolio.gauthier-delvenne.be"
+
+#: header.php:55
 msgid "Retourner à la page d’accueil"
 msgstr "Retourner à la page d’accueil"
 
@@ -66,19 +70,11 @@ msgstr "Retourner à la page d’accueil"
 msgid "La page est vide"
 msgstr "La page est vide"
 
-#: public/assets/js-BRPrK-Ei.js:6
-msgid "left"
-msgstr "gauche"
-
-#: public/assets/js-BRPrK-Ei.js:6
-msgid "right"
-msgstr "droite"
-
-#: single-project.php:99
+#: single-project.php:91
 msgid "Ce projet n’existe pas encore"
 msgstr "Ce projet n’existe pas encore"
 
-#: single-project.php:116
+#: single-project.php:108
 msgid "Autres projets"
 msgstr "Autres projets"
 
@@ -145,3 +141,9 @@ msgstr "&laquo; Précédent"
 #: template-project.php:100
 msgid "Suivant &raquo;"
 msgstr "Suivant &raquo;"
+
+#~ msgid "left"
+#~ msgstr "gauche"
+
+#~ msgid "right"
+#~ msgstr "droite"

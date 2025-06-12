@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-02 11:16+0200\n"
-"PO-Revision-Date: 2025-06-02 11:17+0200\n"
+"POT-Creation-Date: 2025-06-12 15:22+0200\n"
+"PO-Revision-Date: 2025-06-12 15:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -39,8 +39,7 @@ msgid ""
 "Site présentant le portfolio de Delvenne Gauthier, au travers de ses "
 "compétences et ses projets"
 msgstr ""
-"Website presenting Delvenne Gauthier's portfolio of skills and "
-"projects"
+"Website presenting Delvenne Gauthier's portfolio of skills and projects"
 
 #: header.php:11
 msgid "compétence"
@@ -54,11 +53,15 @@ msgstr "projects"
 msgid "travaux"
 msgstr "Work"
 
-#: header.php:40
+#: header.php:43
 msgid "Navigation principal"
 msgstr "Main navigation"
 
-#: header.php:52
+#: header.php:54
+msgid "https://portfolio.gauthier-delvenne.be"
+msgstr "https://portfolio.gauthier-delvenne.be/en/home-page/"
+
+#: header.php:55
 msgid "Retourner à la page d’accueil"
 msgstr "Back to home page"
 
@@ -66,19 +69,11 @@ msgstr "Back to home page"
 msgid "La page est vide"
 msgstr "The page is empty"
 
-#: public/assets/js-BRPrK-Ei.js:6
-msgid "left"
-msgstr "left"
-
-#: public/assets/js-BRPrK-Ei.js:6
-msgid "right"
-msgstr "right"
-
-#: single-project.php:99
+#: single-project.php:91
 msgid "Ce projet n’existe pas encore"
 msgstr "This project does not yet exist"
 
-#: single-project.php:116
+#: single-project.php:108
 msgid "Autres projets"
 msgstr "Other projects"
 
@@ -145,3 +140,9 @@ msgstr "&laquo; Previous"
 #: template-project.php:100
 msgid "Suivant &raquo;"
 msgstr "Next &raquo;"
+
+#~ msgid "left"
+#~ msgstr "left"
+
+#~ msgid "right"
+#~ msgstr "right"
