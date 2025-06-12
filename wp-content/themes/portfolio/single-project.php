@@ -52,7 +52,7 @@
                                         </div>
                                         <?php
                                         $count++;
-                                    endforeach?>
+                                    endforeach ?>
                                 </div>
                             <?php else : ?>
 
@@ -62,30 +62,32 @@
                 <?php endif; ?>
             </section>
         <?php endif; ?>
-
-
-        <?php if (get_row_layout() == 'contact_redirect'): ?>
-            <section class="contact_redirect" aria-labelledby="contact-title">
-                <div class="contact_redirect_container">
-                    <h2 aria-level="2" id="contact-title"
-                        class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
-                    <svg class="arrow">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
+        <?php if (get_row_layout() == 'overflow_redirect'): ?>
+            <section class="overflow_redirect" aria-labelledby="contact-title">
+                <h2 aria-level="2" id="contact-title"
+                    class="overflow_redirect_title"><?php the_sub_field('title'); ?>
+                </h2>
+                <div class="overflow_redirect_link-container">
+                    <?php if (have_rows('link_repeater')): ?>
+                        <?php while (have_rows('link_repeater')) : the_row(); ?>
+                            <?php
+                            $button = get_sub_field('link');
+                            if ($button): ?>
+                                <a href="<?php echo esc_url($button['url']); ?>"
+                                   target="<?php echo esc_attr($button['target'] ?: '_self'); ?>"
+                                   class="overflow_redirect_link hoverCursor"
+                                   aria-label="Aller vers la page : <?php echo esc_html($button['title']); ?>">
+                                    <?php echo esc_html($button['title']); ?>
+                                </a>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
-                <?php
-                $button = get_sub_field('contact_redirect_button');
-                if ($button): ?>
-                    <a href="<?php echo esc_url($button['url']); ?>"
-                       target="<?php echo esc_attr($button['target'] ?: '_self'); ?>"
-                       class="contact_redirect_button hoverCursor"
-                       aria-label="Aller vers la page : <?php echo esc_html($button['title']); ?>">
-                        <?php echo esc_html($button['title']); ?>
-                    </a>
-                <?php endif; ?>
             </section>
         <?php endif; ?>
-    <?php endwhile; else: ?>
+
+    <?php endwhile;
+else: ?>
     <p><?= __hepl('Ce projet n’existe pas encore'); ?>&hellip;</p>
 <?php endif; ?>
 <?php
@@ -134,6 +136,31 @@ if ($related_projects->have_posts()): ?>
         </div>
     </section>
     <?php wp_reset_postdata(); ?>
+    <?php if (have_rows('projet')): ?>
+        <?php while (have_rows('projet')) : the_row(); ?>
+            <?php if (get_row_layout() == 'contact_redirect'): ?>
+                <section class="contact_redirect" aria-labelledby="contact-title">
+                    <div class="contact_redirect_container">
+                        <h2 aria-level="2" id="contact-title"
+                            class="contact_redirect_title"><?php the_sub_field('contact_redirect_title'); ?></h2>
+                        <svg class="arrow">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </div>
+                    <?php
+                    $button = get_sub_field('contact_redirect_button');
+                    if ($button): ?>
+                        <a href="<?php echo esc_url($button['url']); ?>"
+                           target="<?php echo esc_attr($button['target'] ?: '_self'); ?>"
+                           class="contact_redirect_button hoverCursor"
+                           aria-label="Aller vers la page : <?php echo esc_html($button['title']); ?>">
+                            <?php echo esc_html($button['title']); ?>
+                        </a>
+                    <?php endif; ?>
+                </section>
+            <?php endif; ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
 <?php endif; ?>
 
 

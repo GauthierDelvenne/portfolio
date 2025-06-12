@@ -1,6 +1,7 @@
 @import "../settings/fonts";
 @import "../settings/colors";
 @import "../settings/breakpoints";
+@import "../settings/redirect";
 
 
 .single_projet {
@@ -183,9 +184,11 @@
         object-fit: cover;
         border-radius: 0.625rem;
         transition: transform 0.3s ease-in-out;
-        &:hover,&:focus{
-        transform: scale(1.2);
+
+        &:hover, &:focus {
+          transform: scale(1.2);
         }
+
         @include tablet-up {
           min-width: 12rem;
           max-height: 12rem;
@@ -274,4 +277,32 @@
 
 abbr {
   text-decoration: none;
+}
+
+.overflow_redirect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 1rem;
+
+  &_title {
+    font-size: 1.5rem;
+
+  }
+
+  &_link-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .overflow_redirect_link {
+      @include redirect;
+      &:hover, &:focus {
+        font-weight: 700;
+        padding: 0.85rem 2.65rem;
+      }
+    }
+  }
 }
