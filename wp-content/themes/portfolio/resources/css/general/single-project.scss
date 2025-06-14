@@ -296,6 +296,8 @@ abbr {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .overflow_redirect_link {
       @include redirect;
