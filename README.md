@@ -32,5 +32,5 @@ Dans le cadre du cours de **Design Web** à la **Haute École de la Province de 
 - **Hébergement via infomaniak**
 
 ## Lien utile
-- https://portfolio.gauthier-delvenne.be/
-- https://www.figma.com/design/3rSdDPl5H8oYvnrmvDaMk5/Portfolio?node-id=0-1&t=ujZ0uMdd2C9EecOx-1
+- Site : https://portfolio.gauthier-delvenne.be/
+- Figma : https://www.figma.com/design/3rSdDPl5H8oYvnrmvDaMk5/Portfolio?node-id=0-1&t=ujZ0uMdd2C9EecOx-1
