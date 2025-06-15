@@ -30,3 +30,7 @@ Dans le cadre du cours de **Design Web** à la **Haute École de la Province de 
 - **Figma** pour la maquette
 - **Git et GitHub** pour le versioning
 - **Hébergement via infomaniak**
+
+## Lien utile
+- https://portfolio.gauthier-delvenne.be/
+- https://www.figma.com/design/3rSdDPl5H8oYvnrmvDaMk5/Portfolio?node-id=0-1&t=ujZ0uMdd2C9EecOx-1
